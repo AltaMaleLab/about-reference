@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ALTA MALE LAB — About · Référence V1.0</title>
+<title>ALTA MALE LAB — About · Référence V1.1</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
 /* ── Gaoel local ── */
@@ -30,81 +30,102 @@ a { color: #C8B568; text-decoration: none; }
 a:hover { text-decoration: underline; }
 code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.85em; background: #141414; padding: 2px 5px; border-radius: 3px; color: #EDEDED; }
 
+/* ── CSS variables ── */
+:root {
+  --gold: #C8B568;
+  --fg-1: #EDEDED;
+  --fg-2: #B8B8B8;
+  --fg-3: #8A8A8A;
+  --line-1: #1F1F1F;
+  --line-2: #2A2A2A;
+  --bg-2: #0d0d0d;
+}
+
 /* ── Layout ── */
+.wide { max-width: 1560px; margin: 0 auto; padding: 0 40px; }
 .wrap { max-width: 960px; margin: 0 auto; padding: 0 32px; }
 
 /* ── Masthead ── */
-.masthead {
-  border-bottom: 1px solid #1F1F1F;
-  padding: 40px 0 36px;
-  margin-bottom: 80px;
+.mast {
+  border-bottom: 1px solid var(--line-1);
+  padding: 32px 0;
+  margin-bottom: 72px;
 }
-.masthead .mark {
+.mast .wide { display: flex; align-items: baseline; justify-content: space-between; }
+.mark {
   font-family: 'Gaoel', serif;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 0.22em;
-  color: #EDEDED;
-  margin-bottom: 10px;
+  color: var(--fg-1);
 }
-.masthead .mark span { color: #C8B568; margin: 0 6px; }
-.masthead .ver {
+.mark span { color: var(--gold); margin: 0 5px; }
+.ver {
   font-family: 'Lato', sans-serif;
   font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #8A8A8A;
+  color: var(--fg-3);
 }
 
 /* ── Intro block ── */
-.intro { margin-bottom: 80px; }
-.intro h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 28px;
-  color: #EDEDED;
-  margin-bottom: 24px;
-  line-height: 1.2;
-}
-.intro p { margin-bottom: 16px; font-size: 16px; }
-.intro p:last-child { margin-bottom: 0; }
-
-/* ── Rule block ── */
-.rule-block {
-  border: 1px solid #1F1F1F;
-  border-left: 3px solid #C8B568;
-  padding: 28px 32px;
-  margin-bottom: 80px;
-  background: #0d0d0d;
-}
-.rule-block h2 {
+.block { padding: 0 0 72px; }
+.block--first { padding-bottom: 72px; }
+.block .wrap .eyebrow {
+  display: block;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 0.18em;
+  font-size: 11px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #C8B568;
-  margin-bottom: 16px;
+  color: var(--gold);
+  margin-bottom: 20px;
 }
-.rule-block ul { list-style: none; }
-.rule-block ul li {
+.block .wrap h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--fg-1);
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+.block .wrap h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line-1);
+}
+.block .wrap .lede { font-size: 16px; margin-bottom: 16px; }
+.block .wrap p { font-size: 15px; color: var(--fg-2); margin-bottom: 12px; }
+.block .wrap p:last-child { margin-bottom: 0; }
+
+/* ── Rule block ── */
+.rule {
+  border: 1px solid var(--line-1);
+  border-left: 3px solid var(--gold);
+  padding: 28px 32px;
+  margin-bottom: 0;
+  background: var(--bg-2);
+}
+.rule .rule__h {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   font-size: 14px;
-  color: #B8B8B8;
-  padding: 4px 0;
-  padding-left: 16px;
-  position: relative;
+  color: var(--fg-1);
+  margin-bottom: 14px;
 }
-.rule-block ul li::before {
-  content: '–';
-  position: absolute;
-  left: 0;
-  color: #8A8A8A;
-}
+.rule p { font-size: 14px; color: var(--fg-2); }
+.no { color: #E05A5A; font-weight: 700; }
 
 /* ── Divi settings table ── */
 .divi-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 80px;
+  margin-bottom: 0;
   font-size: 14px;
 }
 .divi-table caption {
@@ -113,7 +134,7 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.85em; backgr
   font-size: 13px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #C8B568;
+  color: var(--gold);
   text-align: left;
   padding-bottom: 16px;
 }
@@ -123,132 +144,67 @@ code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.85em; backgr
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #8A8A8A;
+  color: var(--fg-3);
   text-align: left;
   padding: 10px 16px;
-  border-bottom: 1px solid #1F1F1F;
+  border-bottom: 1px solid var(--line-1);
 }
 .divi-table td {
   padding: 12px 16px;
   border-bottom: 1px solid #111;
-  color: #B8B8B8;
+  color: var(--fg-2);
   vertical-align: top;
 }
-.divi-table td:first-child { color: #EDEDED; white-space: nowrap; }
+.divi-table td:first-child { color: var(--fg-1); white-space: nowrap; }
 .divi-table td code { font-size: 12px; }
 .divi-table tr:last-child td { border-bottom: none; }
 
-/* ── Design system ── */
-.ds-section { margin-bottom: 80px; }
-.ds-section h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #C8B568;
-  margin-bottom: 32px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #1F1F1F;
-}
-
-/* Swatches */
-.swatches { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
-.swatch {
-  width: 100px;
-  border: 1px solid #1F1F1F;
-  border-radius: 4px;
-  overflow: hidden;
-}
+/* ── Design system swatches ── */
+.swatches { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.swatch { width: 100px; border: 1px solid var(--line-1); border-radius: 4px; overflow: hidden; }
 .swatch__color { height: 56px; }
-.swatch__info { padding: 8px 10px; background: #0d0d0d; }
-.swatch__name { font-size: 11px; color: #8A8A8A; letter-spacing: 0.08em; display: block; }
-.swatch__hex { font-family: 'SF Mono', monospace; font-size: 12px; color: #EDEDED; }
+.swatch__info { padding: 8px 10px; background: var(--bg-2); }
+.swatch__name { font-size: 11px; color: var(--fg-3); letter-spacing: 0.08em; display: block; }
+.swatch__hex { font-family: 'SF Mono', monospace; font-size: 12px; color: var(--fg-1); }
 
-/* Typography specimens */
+/* Type specimens */
 .type-specimen { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #111; }
 .type-specimen:last-child { border-bottom: none; }
-.type-label {
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #8A8A8A;
-  margin-bottom: 10px;
-  display: block;
-}
+.type-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3); margin-bottom: 10px; display: block; }
 
 /* ── TOC ── */
-.toc { margin-bottom: 80px; }
-.toc h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #C8B568;
-  margin-bottom: 24px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #1F1F1F;
-}
-.toc ol { list-style: none; counter-reset: toc; }
+.toc ol { list-style: none; }
 .toc ol li {
-  counter-increment: toc;
   display: flex;
   align-items: baseline;
   gap: 12px;
   padding: 8px 0;
   border-bottom: 1px solid #111;
   font-size: 14px;
+  counter-increment: toc;
 }
+.toc ol { counter-reset: toc; }
 .toc ol li::before {
   content: counter(toc, decimal-leading-zero);
   font-family: 'Poppins', sans-serif;
   font-size: 11px;
-  color: #8A8A8A;
+  color: var(--fg-3);
   flex-shrink: 0;
   width: 24px;
 }
-.toc ol li a { color: #B8B8B8; }
-.toc ol li a:hover { color: #EDEDED; }
-.toc ol li .toc-file {
-  margin-left: auto;
-  font-size: 11px;
-  color: #8A8A8A;
-  font-family: 'SF Mono', monospace;
-  white-space: nowrap;
-}
+.toc ol li a { color: var(--fg-2); }
+.toc ol li a:hover { color: var(--fg-1); }
+.toc-file { margin-left: auto; font-size: 11px; color: var(--fg-3); font-family: 'SF Mono', monospace; white-space: nowrap; }
 
 /* ── Section articles ── */
-.sections { margin-bottom: 80px; }
-.sections > h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #C8B568;
-  margin-bottom: 48px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #1F1F1F;
-}
+.sec { padding: 80px 0; border-bottom: 1px solid var(--line-1); }
+.sec:last-child { border-bottom: none; }
 
-article.sec {
-  margin-bottom: 96px;
-  padding-bottom: 96px;
-  border-bottom: 1px solid #1F1F1F;
-}
-article.sec:last-child { border-bottom: none; margin-bottom: 0; }
-
-.sec__head {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  margin-bottom: 32px;
-}
+.sec__head { display: flex; align-items: baseline; gap: 20px; margin-bottom: 32px; }
 .sec__num {
   font-family: 'Poppins', sans-serif;
   font-size: 11px;
-  color: #8A8A8A;
+  color: var(--fg-3);
   letter-spacing: 0.14em;
   flex-shrink: 0;
 }
@@ -256,257 +212,192 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 20px;
-  color: #EDEDED;
+  color: var(--fg-1);
   line-height: 1.2;
 }
+.sec__file { margin-top: 6px; }
+.sec__file code { font-size: 12px; }
 
-/* ── iframes row ── */
-.sec__row {
-  display: grid;
-  grid-template-columns: 392px 1fr;
-  gap: 24px;
-  margin-bottom: 32px;
-  align-items: start;
-}
-
-/* Desktop iframe box */
-.box-desktop {
-  background: #000;
-  border: 1px solid #1F1F1F;
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-}
-.box-desktop__label {
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #8A8A8A;
-  padding: 8px 12px;
-  border-bottom: 1px solid #111;
-  background: #0d0d0d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.box-desktop__label span { color: #C8B568; }
-.iframe-desktop-wrap {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-.iframe-desktop-wrap iframe {
-  width: 1440px;
-  border: none;
-  display: block;
-  transform-origin: top left;
-  pointer-events: none;
-}
-
-/* Mobile iframe box */
-.box-mobile {
-  background: #000;
-  border: 1px solid #1F1F1F;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.box-mobile__label {
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #8A8A8A;
-  padding: 8px 12px;
-  border-bottom: 1px solid #111;
-  background: #0d0d0d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.box-mobile__label span { color: #C8B568; }
-.iframe-mobile-wrap {
-  width: 390px;
-  overflow: hidden;
-}
-.iframe-mobile-wrap iframe {
-  width: 390px;
-  border: none;
-  display: block;
-  pointer-events: none;
-}
-
-/* ── Actions ── */
-.sec__actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.btn-copy, .btn-dl {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+/* ── Frames ── */
+.frame { margin: 0 0 32px; }
+.frame__label {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 11px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: opacity 0.15s;
-  text-decoration: none;
+  color: var(--fg-3);
+  margin-bottom: 10px;
 }
-.btn-copy {
-  background: #C8B568;
-  color: #000;
-  border: none;
+.frame__box {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line-2);
+  background: #000;
 }
-.btn-copy:hover { opacity: 0.85; }
-.btn-dl {
+.frame__box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  transform-origin: 0 0;
+  display: block;
+  background: #000;
+}
+
+/* ── Row: mobile (392px) + side panel ── */
+.sec__row { display: grid; grid-template-columns: 392px 1fr; gap: 48px; align-items: start; }
+.frame--mob { margin: 0; }
+
+/* ── Side panel ── */
+.side__actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 14px 22px;
   background: transparent;
-  color: #C8B568;
-  border: 1px solid #C8B568;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1;
 }
-.btn-dl:hover { background: rgba(200,181,104,0.08); text-decoration: none; }
-.btn-copy.copied { background: #4CAF50; color: #fff; }
+.btn--quiet { color: var(--fg-2); border-color: var(--line-2); }
+.btn.copied { color: #4CAF50; border-color: #4CAF50; }
+.side__hint { font-size: 14px; color: var(--fg-3); line-height: 1.6; }
 
 /* ── Footer ── */
-.footer {
-  border-top: 1px solid #1F1F1F;
-  padding: 40px 0 60px;
-  text-align: center;
-  font-size: 12px;
-  color: #8A8A8A;
+.footer { padding: 72px 0 96px; font-size: 14px; color: var(--fg-3); }
+
+@media (max-width: 900px) {
+  .sec__row { grid-template-columns: 1fr; gap: 32px; }
+  .frame--mob { max-width: 392px; }
+}
+@media (max-width: 640px) {
+  .wide { padding: 0 20px; }
+  .wrap { padding: 0 20px; }
+  .sec { padding: 60px 0; }
 }
 </style>
 </head>
 <body>
 
-<div class="wrap">
-
-  <!-- ── Masthead ── -->
-  <header class="masthead">
+<header class="mast">
+  <div class="wide">
     <div class="mark">ALTA<span>★</span>MALE LAB</div>
-    <div class="ver">Page About · Référence V1.0 · 20.10.2026</div>
-  </header>
+    <div class="ver">Page About · Référence V1.1 · 20.10.2026</div>
+  </div>
+</header>
 
-  <!-- ── Intro ── -->
-  <section class="intro">
-    <h1>About Page — Guide d'intégration Divi</h1>
-    <p>Ce document de référence présente les 12 sections de la page About d'Alta Male Lab, prêtes à intégrer dans WordPress/Divi via des <strong style="color:#EDEDED">modules Code</strong>. Chaque section est un fichier HTML autonome — coller tel quel dans le module Code Divi.</p>
-    <p>Chaque section est prévisualisée en mode desktop (1440px mis à l'échelle) et mobile (390px réel), avec un bouton pour copier le code et un lien de téléchargement du fichier.</p>
-  </section>
+<!-- ── Intro ── -->
+<section class="block block--first">
+  <div class="wrap">
+    <span class="eyebrow">Référence d'intégration</span>
+    <h1>Page About ALTA MALE LAB — rendu attendu et méthode Divi.</h1>
+    <p class="lede">Cette page montre les 12 sections de la page About telles qu'elles doivent apparaître sur le site, en desktop et en mobile. Chaque aperçu est produit par le fichier exact à intégrer.</p>
+    <p>Un fichier = un module Code Divi. Ce que tu vois ici, c'est ce que le fichier donne une fois collé.</p>
+  </div>
+</section>
 
-  <!-- ── La règle ── -->
-  <section class="rule-block">
-    <h2>La règle — Un module Code Divi par section</h2>
-    <ul>
-      <li>Chaque fichier = un seul module Code dans Divi. Coller le contenu entre <code>&lt;body&gt;</code> et <code>&lt;/body&gt;</code> uniquement (ou le fichier complet selon la méthode de Laurent)</li>
-      <li>Les styles Divi sont neutralisés par les préfixes de classe scoped (<code>alta-ab-sXX-</code>) et le <code>!important</code> systématique</li>
-      <li>Les polices Google (Poppins + Lato) sont chargées par le <code>&lt;head&gt;</code> de chaque fichier — Divi les chargera une seule fois</li>
-      <li>S07 (About Anthony) contient un portrait encodé en base64 (~3.8 MB) — poids normal, aucune dépendance externe</li>
-      <li>S11 (ALTA &amp; Men's Health) : les liens CTA (<code>href="#"</code>) sont à compléter par Laurent avant mise en ligne</li>
-    </ul>
-  </section>
+<!-- ── La règle ── -->
+<section class="block">
+  <div class="wrap">
+    <span class="eyebrow">01 — La règle</span>
+    <h2>Un fichier = un module Code.</h2>
+    <div class="rule">
+      <p class="rule__h">Chaque section de la page About = un seul module Code Divi, dans lequel on colle le fichier HTML/CSS correspondant, tel quel.</p>
+      <p><span class="no">Aucun</span> module Texte, Titre, Bouton, Blog, Image ou Séparateur. <span class="no">Aucun</span> réglage de style Divi (police, taille, couleur, espacement, responsive). <span class="no">Aucun</span> texte retapé.</p>
+    </div>
+    <p style="margin-top:20px; font-size:14px;">S07 (About Anthony) contient un portrait encodé en base64 (~3.8 MB) — poids normal, aucune dépendance externe. S11 : les liens CTA (<code>href="#"</code>) sont à compléter avant mise en ligne.</p>
+  </div>
+</section>
 
-  <!-- ── Divi settings ── -->
-  <table class="divi-table">
-    <caption>Réglages Divi recommandés</caption>
-    <thead>
-      <tr>
-        <th>Réglage</th>
-        <th>Valeur</th>
-        <th>Note</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Module</td>
-        <td>Code</td>
-        <td>Un module par section, pas de Row ni de Column Divi</td>
-      </tr>
-      <tr>
-        <td>Background</td>
-        <td><code>#000000</code></td>
-        <td>Désactiver tout background Divi sur la section et la row</td>
-      </tr>
-      <tr>
-        <td>Padding section</td>
-        <td><code>0px</code></td>
-        <td>Le padding est géré par le code HTML de chaque section</td>
-      </tr>
-      <tr>
-        <td>Gutter width</td>
-        <td>0</td>
-        <td>Désactiver les gouttières Divi</td>
-      </tr>
-      <tr>
-        <td>Max width</td>
-        <td>100%</td>
-        <td>Le <code>max-width: 760px</code> est géré en interne</td>
-      </tr>
-      <tr>
-        <td>Custom CSS</td>
-        <td>—</td>
-        <td>Ne pas ajouter de CSS Divi — tous les styles sont dans le module</td>
-      </tr>
-    </tbody>
-  </table>
+<!-- ── Réglages Divi ── -->
+<section class="block">
+  <div class="wrap">
+    <span class="eyebrow">02 — Réglages Divi</span>
+    <h2>Paramètres à appliquer à chaque section</h2>
+    <table class="divi-table">
+      <thead>
+        <tr>
+          <th>Réglage</th>
+          <th>Valeur</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Module</td>
+          <td>Code</td>
+          <td>Un module par section, pas de Row ni de Column Divi</td>
+        </tr>
+        <tr>
+          <td>Background</td>
+          <td><code>#000000</code></td>
+          <td>Désactiver tout background Divi sur la section et la row</td>
+        </tr>
+        <tr>
+          <td>Padding section</td>
+          <td><code>0px</code></td>
+          <td>Le padding est géré par le code HTML de chaque section</td>
+        </tr>
+        <tr>
+          <td>Gutter width</td>
+          <td>0</td>
+          <td>Désactiver les gouttières Divi</td>
+        </tr>
+        <tr>
+          <td>Max width</td>
+          <td>100%</td>
+          <td>Le <code>max-width: 760px</code> est géré en interne</td>
+        </tr>
+        <tr>
+          <td>Custom CSS</td>
+          <td>—</td>
+          <td>Ne pas ajouter de CSS Divi — tous les styles sont dans le module</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-  <!-- ── Design System ── -->
-  <section class="ds-section">
-    <h2>Design System ALTA — About Page</h2>
-
-    <!-- Couleurs -->
+<!-- ── Design System ── -->
+<section class="block">
+  <div class="wrap">
+    <span class="eyebrow">03 — Design System</span>
+    <h2>Couleurs et typographie ALTA</h2>
     <div class="swatches">
       <div class="swatch">
         <div class="swatch__color" style="background:#000000;"></div>
-        <div class="swatch__info">
-          <span class="swatch__name">Background</span>
-          <span class="swatch__hex">#000000</span>
-        </div>
+        <div class="swatch__info"><span class="swatch__name">Background</span><span class="swatch__hex">#000000</span></div>
       </div>
       <div class="swatch">
         <div class="swatch__color" style="background:#EDEDED; border-bottom:1px solid #1F1F1F;"></div>
-        <div class="swatch__info">
-          <span class="swatch__name">Text Primary</span>
-          <span class="swatch__hex">#EDEDED</span>
-        </div>
+        <div class="swatch__info"><span class="swatch__name">Text Primary</span><span class="swatch__hex">#EDEDED</span></div>
       </div>
       <div class="swatch">
         <div class="swatch__color" style="background:#B8B8B8;"></div>
-        <div class="swatch__info">
-          <span class="swatch__name">Text Secondary</span>
-          <span class="swatch__hex">#B8B8B8</span>
-        </div>
+        <div class="swatch__info"><span class="swatch__name">Text Secondary</span><span class="swatch__hex">#B8B8B8</span></div>
       </div>
       <div class="swatch">
         <div class="swatch__color" style="background:#8A8A8A;"></div>
-        <div class="swatch__info">
-          <span class="swatch__name">Text Subtle</span>
-          <span class="swatch__hex">#8A8A8A</span>
-        </div>
+        <div class="swatch__info"><span class="swatch__name">Text Subtle</span><span class="swatch__hex">#8A8A8A</span></div>
       </div>
       <div class="swatch">
         <div class="swatch__color" style="background:#C8B568;"></div>
-        <div class="swatch__info">
-          <span class="swatch__name">Gold Accent</span>
-          <span class="swatch__hex">#C8B568</span>
-        </div>
+        <div class="swatch__info"><span class="swatch__name">Gold Accent</span><span class="swatch__hex">#C8B568</span></div>
       </div>
       <div class="swatch">
         <div class="swatch__color" style="background:#1F1F1F;"></div>
-        <div class="swatch__info">
-          <span class="swatch__name">Separator</span>
-          <span class="swatch__hex">#1F1F1F</span>
-        </div>
+        <div class="swatch__info"><span class="swatch__name">Separator</span><span class="swatch__hex">#1F1F1F</span></div>
       </div>
     </div>
-
-    <!-- Typographie -->
     <div class="type-specimen">
       <span class="type-label">H1 — Poppins SemiBold 600 · clamp(36px, 5vw, 64px)</span>
-      <div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:48px;color:#EDEDED;line-height:1.1;letter-spacing:-0.01em;">The Long Game for Men 40+</div>
+      <div style="font-family:'Poppins',sans-serif;font-weight:600;font-size:48px;color:#EDEDED;line-height:1.1;">The Long Game for Men 40+</div>
     </div>
     <div class="type-specimen">
       <span class="type-label">H2 — Poppins Medium 500 · clamp(24px, 3vw, 32px)</span>
@@ -514,448 +405,538 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
     </div>
     <div class="type-specimen">
       <span class="type-label">Body — Lato Light 300 · 18px · line-height 1.8 · #B8B8B8</span>
-      <div style="font-family:'Lato',sans-serif;font-weight:300;font-size:18px;color:#B8B8B8;line-height:1.8;max-width:600px;">Alta Male Lab is a journal for men navigating the second half of life. A space for those who want to understand their biology, refine their habits, and build a version of themselves that lasts.</div>
-    </div>
-    <div class="type-specimen">
-      <span class="type-label">Eyebrow — Poppins Medium 500 · 13–14px · uppercase · letter-spacing 0.18em · #C8B568</span>
-      <div style="font-family:'Poppins',sans-serif;font-weight:500;font-size:13px;color:#C8B568;letter-spacing:0.18em;text-transform:uppercase;">Metabolic Intelligence</div>
+      <div style="font-family:'Lato',sans-serif;font-weight:300;font-size:18px;color:#B8B8B8;line-height:1.8;max-width:600px;">Alta Male Lab est un journal pour les hommes qui abordent la seconde moitié de leur vie avec lucidité.</div>
     </div>
     <div class="type-specimen">
       <span class="type-label">Wordmark — Gaoel (logo uniquement) · jamais pour titres ou body</span>
       <div style="font-family:'Gaoel',serif;font-size:28px;color:#EDEDED;letter-spacing:0.2em;">ALTA MALE LAB</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── TOC ── -->
-  <nav class="toc">
-    <h2>Table des matières — 12 sections</h2>
-    <ol>
-      <li><a href="#sec-01">Hero — The Long Game for Men 40+</a><span class="toc-file">about-s01-hero.html</span></li>
-      <li><a href="#sec-02">The Long Game</a><span class="toc-file">about-s02-the-long-game.html</span></li>
-      <li><a href="#sec-03">Core Principle — Energy. Structure. Regulation.</a><span class="toc-file">about-s03-core-principle.html</span></li>
-      <li><a href="#sec-04">What Alta Male Lab Is</a><span class="toc-file">about-s04-what-alta-male-lab-is.html</span></li>
-      <li><a href="#sec-05">Who Is the Alta Male</a><span class="toc-file">about-s05-who-is-the-alta-male.html</span></li>
-      <li><a href="#sec-06">The Meaning of Alta</a><span class="toc-file">about-s06-the-meaning-of-alta.html</span></li>
-      <li><a href="#sec-07">About Anthony</a><span class="toc-file">about-s07-about-anthony.html</span></li>
-      <li><a href="#sec-08">The Alta Framework</a><span class="toc-file">about-s08-the-alta-framework.html</span></li>
-      <li><a href="#sec-09">A Different Vision of Masculinity</a><span class="toc-file">about-s09-a-different-vision-of-masculinity.html</span></li>
-      <li><a href="#sec-10">A Journal for the Second Half of Life</a><span class="toc-file">about-s10-a-journal-for-the-second-half-of-life.html</span></li>
-      <li><a href="#sec-11">ALTA &amp; Men's Health</a><span class="toc-file">about-s11-alta-mens-health.html</span></li>
-      <li><a href="#sec-12">Welcome — Play the Long Game.</a><span class="toc-file">about-s12-welcome.html</span></li>
-    </ol>
-  </nav>
+<!-- ── TOC ── -->
+<section class="block">
+  <div class="wrap">
+    <span class="eyebrow">04 — Les 12 sections</span>
+    <h2>Table des matières</h2>
+    <nav class="toc">
+      <ol>
+        <li><a href="#sec-01">Hero — The Long Game for Men 40+</a><span class="toc-file">about-s01-hero.html</span></li>
+        <li><a href="#sec-02">The Long Game</a><span class="toc-file">about-s02-the-long-game.html</span></li>
+        <li><a href="#sec-03">Core Principle — Energy. Structure. Regulation.</a><span class="toc-file">about-s03-core-principle.html</span></li>
+        <li><a href="#sec-04">What Alta Male Lab Is</a><span class="toc-file">about-s04-what-alta-male-lab-is.html</span></li>
+        <li><a href="#sec-05">Who Is the Alta Male</a><span class="toc-file">about-s05-who-is-the-alta-male.html</span></li>
+        <li><a href="#sec-06">The Meaning of Alta</a><span class="toc-file">about-s06-the-meaning-of-alta.html</span></li>
+        <li><a href="#sec-07">About Anthony</a><span class="toc-file">about-s07-about-anthony.html</span></li>
+        <li><a href="#sec-08">The Alta Framework</a><span class="toc-file">about-s08-the-alta-framework.html</span></li>
+        <li><a href="#sec-09">A Different Vision of Masculinity</a><span class="toc-file">about-s09-a-different-vision-of-masculinity.html</span></li>
+        <li><a href="#sec-10">A Journal for the Second Half of Life</a><span class="toc-file">about-s10-a-journal-for-the-second-half-of-life.html</span></li>
+        <li><a href="#sec-11">ALTA &amp; Men's Health</a><span class="toc-file">about-s11-alta-mens-health.html</span></li>
+        <li><a href="#sec-12">Welcome — Play the Long Game.</a><span class="toc-file">about-s12-welcome.html</span></li>
+      </ol>
+    </nav>
+  </div>
+</section>
 
-  <!-- ══════════════════════════════════════════ -->
-  <!-- SECTIONS                                  -->
-  <!-- ══════════════════════════════════════════ -->
-  <section class="sections">
-    <h2>Les 12 sections — Prévisualisation &amp; Code</h2>
+<!-- ══════════════════════════════════════════ -->
+<!-- SECTIONS — Prévisualisation & Code        -->
+<!-- ══════════════════════════════════════════ -->
+<section class="block">
+  <div class="wide">
+    <div class="wrap" style="margin-bottom:48px;">
+      <span class="eyebrow">05 — Prévisualisation &amp; Code</span>
+      <h2>Les 12 sections — rendu desktop et mobile</h2>
+    </div>
 
     <!-- S01 -->
     <article class="sec" id="sec-01">
-      <div class="sec__head">
-        <span class="sec__num">S01</span>
-        <h2 class="sec__title">Hero — The Long Game for Men 40+</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S01</div>
+          <div>
+            <h3 class="sec__title">Hero — The Long Game for Men 40+</h3>
+            <div class="sec__file"><code>about-s01-hero.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw01">
-            <iframe src="preview/s01.html" id="df01" scrolling="no" title="S01 Desktop"></iframe>
+      <!-- Desktop — pleine largeur -->
+      <div class="frame frame--desk" data-w="1440" data-h="810" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox01"><iframe src="preview/s01.html" id="df01" title="S01 desktop" scrolling="no"></iframe></div>
+      </div>
+      <!-- Row: mobile + side panel -->
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox01"><iframe src="preview/s01.html" id="mf01" title="S01 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s01-hero.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s01-hero.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Le code copié est le fichier exact. Coller tel quel dans un module Code Divi.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s01.html" id="mf01" scrolling="no" title="S01 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s01-hero.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s01-hero.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
     <!-- S02 -->
     <article class="sec" id="sec-02">
-      <div class="sec__head">
-        <span class="sec__num">S02</span>
-        <h2 class="sec__title">The Long Game</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S02</div>
+          <div>
+            <h3 class="sec__title">The Long Game</h3>
+            <div class="sec__file"><code>about-s02-the-long-game.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw02">
-            <iframe src="preview/s02.html" id="df02" scrolling="no" title="S02 Desktop"></iframe>
+      <div class="frame frame--desk" data-w="1440" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox02"><iframe src="preview/s02.html" id="df02" title="S02 desktop" scrolling="no"></iframe></div>
+      </div>
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox02"><iframe src="preview/s02.html" id="mf02" title="S02 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s02-the-long-game.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s02-the-long-game.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Le code copié est le fichier exact. Coller tel quel dans un module Code Divi.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s02.html" id="mf02" scrolling="no" title="S02 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s02-the-long-game.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s02-the-long-game.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
     <!-- S03 -->
     <article class="sec" id="sec-03">
-      <div class="sec__head">
-        <span class="sec__num">S03</span>
-        <h2 class="sec__title">Core Principle — Energy. Structure. Regulation.</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S03</div>
+          <div>
+            <h3 class="sec__title">Core Principle — Energy. Structure. Regulation.</h3>
+            <div class="sec__file"><code>about-s03-core-principle.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw03">
-            <iframe src="preview/s03.html" id="df03" scrolling="no" title="S03 Desktop"></iframe>
+      <div class="frame frame--desk" data-w="1440" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox03"><iframe src="preview/s03.html" id="df03" title="S03 desktop" scrolling="no"></iframe></div>
+      </div>
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox03"><iframe src="preview/s03.html" id="mf03" title="S03 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s03-core-principle.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s03-core-principle.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Le code copié est le fichier exact. Coller tel quel dans un module Code Divi.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s03.html" id="mf03" scrolling="no" title="S03 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s03-core-principle.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s03-core-principle.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
     <!-- S04 -->
     <article class="sec" id="sec-04">
-      <div class="sec__head">
-        <span class="sec__num">S04</span>
-        <h2 class="sec__title">What Alta Male Lab Is</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S04</div>
+          <div>
+            <h3 class="sec__title">What Alta Male Lab Is</h3>
+            <div class="sec__file"><code>about-s04-what-alta-male-lab-is.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw04">
-            <iframe src="preview/s04.html" id="df04" scrolling="no" title="S04 Desktop"></iframe>
+      <div class="frame frame--desk" data-w="1440" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox04"><iframe src="preview/s04.html" id="df04" title="S04 desktop" scrolling="no"></iframe></div>
+      </div>
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox04"><iframe src="preview/s04.html" id="mf04" title="S04 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s04-what-alta-male-lab-is.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s04-what-alta-male-lab-is.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Le code copié est le fichier exact. Coller tel quel dans un module Code Divi.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s04.html" id="mf04" scrolling="no" title="S04 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s04-what-alta-male-lab-is.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s04-what-alta-male-lab-is.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
     <!-- S05 -->
     <article class="sec" id="sec-05">
-      <div class="sec__head">
-        <span class="sec__num">S05</span>
-        <h2 class="sec__title">Who Is the Alta Male</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S05</div>
+          <div>
+            <h3 class="sec__title">Who Is the Alta Male</h3>
+            <div class="sec__file"><code>about-s05-who-is-the-alta-male.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw05">
-            <iframe src="preview/s05.html" id="df05" scrolling="no" title="S05 Desktop"></iframe>
+      <div class="frame frame--desk" data-w="1440" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox05"><iframe src="preview/s05.html" id="df05" title="S05 desktop" scrolling="no"></iframe></div>
+      </div>
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox05"><iframe src="preview/s05.html" id="mf05" title="S05 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s05-who-is-the-alta-male.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s05-who-is-the-alta-male.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Le code copié est le fichier exact. Coller tel quel dans un module Code Divi.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s05.html" id="mf05" scrolling="no" title="S05 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s05-who-is-the-alta-male.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s05-who-is-the-alta-male.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
     <!-- S06 -->
     <article class="sec" id="sec-06">
-      <div class="sec__head">
-        <span class="sec__num">S06</span>
-        <h2 class="sec__title">The Meaning of Alta</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S06</div>
+          <div>
+            <h3 class="sec__title">The Meaning of Alta</h3>
+            <div class="sec__file"><code>about-s06-the-meaning-of-alta.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw06">
-            <iframe src="preview/s06.html" id="df06" scrolling="no" title="S06 Desktop"></iframe>
+      <div class="frame frame--desk" data-w="1440" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox06"><iframe src="preview/s06.html" id="df06" title="S06 desktop" scrolling="no"></iframe></div>
+      </div>
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox06"><iframe src="preview/s06.html" id="mf06" title="S06 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s06-the-meaning-of-alta.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s06-the-meaning-of-alta.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Le code copié est le fichier exact. Coller tel quel dans un module Code Divi.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s06.html" id="mf06" scrolling="no" title="S06 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s06-the-meaning-of-alta.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s06-the-meaning-of-alta.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
     <!-- S07 -->
     <article class="sec" id="sec-07">
-      <div class="sec__head">
-        <span class="sec__num">S07</span>
-        <h2 class="sec__title">About Anthony</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S07</div>
+          <div>
+            <h3 class="sec__title">About Anthony</h3>
+            <div class="sec__file"><code>about-s07-about-anthony.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw07">
-            <iframe src="preview/s07.html" id="df07" scrolling="no" title="S07 Desktop"></iframe>
+      <div class="frame frame--desk" data-w="1440" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox07"><iframe src="preview/s07.html" id="df07" title="S07 desktop" scrolling="no"></iframe></div>
+      </div>
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox07"><iframe src="preview/s07.html" id="mf07" title="S07 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s07-about-anthony.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s07-about-anthony.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Le code copié est le fichier exact. Portrait encodé en base64 (~3.8 MB) — aucune dépendance externe.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s07.html" id="mf07" scrolling="no" title="S07 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s07-about-anthony.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s07-about-anthony.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
     <!-- S08 -->
     <article class="sec" id="sec-08">
-      <div class="sec__head">
-        <span class="sec__num">S08</span>
-        <h2 class="sec__title">The Alta Framework</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S08</div>
+          <div>
+            <h3 class="sec__title">The Alta Framework</h3>
+            <div class="sec__file"><code>about-s08-the-alta-framework.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw08">
-            <iframe src="preview/s08.html" id="df08" scrolling="no" title="S08 Desktop"></iframe>
+      <div class="frame frame--desk" data-w="1440" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox08"><iframe src="preview/s08.html" id="df08" title="S08 desktop" scrolling="no"></iframe></div>
+      </div>
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox08"><iframe src="preview/s08.html" id="mf08" title="S08 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s08-the-alta-framework.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s08-the-alta-framework.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Le code copié est le fichier exact. Coller tel quel dans un module Code Divi.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s08.html" id="mf08" scrolling="no" title="S08 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s08-the-alta-framework.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s08-the-alta-framework.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
     <!-- S09 -->
     <article class="sec" id="sec-09">
-      <div class="sec__head">
-        <span class="sec__num">S09</span>
-        <h2 class="sec__title">A Different Vision of Masculinity</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S09</div>
+          <div>
+            <h3 class="sec__title">A Different Vision of Masculinity</h3>
+            <div class="sec__file"><code>about-s09-a-different-vision-of-masculinity.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw09">
-            <iframe src="preview/s09.html" id="df09" scrolling="no" title="S09 Desktop"></iframe>
+      <div class="frame frame--desk" data-w="1440" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox09"><iframe src="preview/s09.html" id="df09" title="S09 desktop" scrolling="no"></iframe></div>
+      </div>
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox09"><iframe src="preview/s09.html" id="mf09" title="S09 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s09-a-different-vision-of-masculinity.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s09-a-different-vision-of-masculinity.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Le code copié est le fichier exact. Coller tel quel dans un module Code Divi.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s09.html" id="mf09" scrolling="no" title="S09 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s09-a-different-vision-of-masculinity.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s09-a-different-vision-of-masculinity.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
     <!-- S10 -->
     <article class="sec" id="sec-10">
-      <div class="sec__head">
-        <span class="sec__num">S10</span>
-        <h2 class="sec__title">A Journal for the Second Half of Life</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S10</div>
+          <div>
+            <h3 class="sec__title">A Journal for the Second Half of Life</h3>
+            <div class="sec__file"><code>about-s10-a-journal-for-the-second-half-of-life.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw10">
-            <iframe src="preview/s10.html" id="df10" scrolling="no" title="S10 Desktop"></iframe>
+      <div class="frame frame--desk" data-w="1440" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox10"><iframe src="preview/s10.html" id="df10" title="S10 desktop" scrolling="no"></iframe></div>
+      </div>
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox10"><iframe src="preview/s10.html" id="mf10" title="S10 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s10-a-journal-for-the-second-half-of-life.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s10-a-journal-for-the-second-half-of-life.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Le code copié est le fichier exact. Coller tel quel dans un module Code Divi.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s10.html" id="mf10" scrolling="no" title="S10 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s10-a-journal-for-the-second-half-of-life.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s10-a-journal-for-the-second-half-of-life.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
     <!-- S11 -->
     <article class="sec" id="sec-11">
-      <div class="sec__head">
-        <span class="sec__num">S11</span>
-        <h2 class="sec__title">ALTA &amp; Men's Health</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S11</div>
+          <div>
+            <h3 class="sec__title">ALTA &amp; Men's Health</h3>
+            <div class="sec__file"><code>about-s11-alta-mens-health.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw11">
-            <iframe src="preview/s11.html" id="df11" scrolling="no" title="S11 Desktop"></iframe>
+      <div class="frame frame--desk" data-w="1440" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox11"><iframe src="preview/s11.html" id="df11" title="S11 desktop" scrolling="no"></iframe></div>
+      </div>
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox11"><iframe src="preview/s11.html" id="mf11" title="S11 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s11-alta-mens-health.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s11-alta-mens-health.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Les liens CTA (<code>href="#"</code>) sont à compléter avant mise en ligne.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s11.html" id="mf11" scrolling="no" title="S11 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s11-alta-mens-health.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s11-alta-mens-health.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
     <!-- S12 -->
     <article class="sec" id="sec-12">
-      <div class="sec__head">
-        <span class="sec__num">S12</span>
-        <h2 class="sec__title">Welcome — Play the Long Game.</h2>
+      <div class="wrap">
+        <header class="sec__head">
+          <div class="sec__num">S12</div>
+          <div>
+            <h3 class="sec__title">Welcome — Play the Long Game.</h3>
+            <div class="sec__file"><code>about-s12-welcome.html</code></div>
+          </div>
+        </header>
       </div>
-      <div class="sec__row">
-        <div class="box-desktop">
-          <div class="box-desktop__label">Desktop <span>1440px</span></div>
-          <div class="iframe-desktop-wrap" id="dw12">
-            <iframe src="preview/s12.html" id="df12" scrolling="no" title="S12 Desktop"></iframe>
+      <div class="frame frame--desk" data-w="1440" style="margin: 0 0 32px;">
+        <div class="wrap"><div class="frame__label">Desktop · 1440 px</div></div>
+        <div class="frame__box" id="dbox12"><iframe src="preview/s12.html" id="df12" title="S12 desktop" scrolling="no"></iframe></div>
+      </div>
+      <div class="wrap">
+        <div class="sec__row">
+          <div class="frame frame--mob" data-w="390">
+            <div class="frame__label">Mobile · 390 px</div>
+            <div class="frame__box" id="mbox12"><iframe src="preview/s12.html" id="mf12" title="S12 mobile" scrolling="no"></iframe></div>
+          </div>
+          <div class="sec__side">
+            <div class="side__actions">
+              <button class="btn" type="button" data-copy="code/about-s12-welcome.html">Copier le code</button>
+              <a class="btn btn--quiet" href="code/about-s12-welcome.html" download>Télécharger le fichier</a>
+            </div>
+            <p class="side__hint">Le code copié est le fichier exact. Coller tel quel dans un module Code Divi.</p>
           </div>
         </div>
-        <div class="box-mobile">
-          <div class="box-mobile__label">Mobile <span>390px</span></div>
-          <div class="iframe-mobile-wrap">
-            <iframe src="preview/s12.html" id="mf12" scrolling="no" title="S12 Mobile"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="sec__actions">
-        <button class="btn-copy" data-copy="code/about-s12-welcome.html">Copier le code</button>
-        <a class="btn-dl" href="code/about-s12-welcome.html" download>↓ Télécharger le fichier</a>
       </div>
     </article>
 
-  </section><!-- /sections -->
+  </div><!-- /wide -->
+</section>
 
-  <footer class="footer">
-    <p>ALTA MALE LAB — Page About · Référence V1.0 · 20.10.2026</p>
+<footer class="footer">
+  <div class="wrap" style="text-align:center;">
+    <p>ALTA MALE LAB — Page About · Référence V1.1 · 20.10.2026</p>
     <p style="margin-top:8px;">Intégration : Laurent Cornalino · laurent-cornalino.com</p>
-  </footer>
+  </div>
+</footer>
 
-</div><!-- /wrap -->
-
-<!-- ════════════════════════════════════════ -->
-<!-- JS — iframe auto-scaling + copy buttons -->
-<!-- ════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════ -->
+<!-- JS — iframe auto-scaling + copy buttons     -->
+<!-- ════════════════════════════════════════════ -->
 <script>
-/* ── Fit desktop iframes (1440px → container width) ── */
-function fit(n) {
-  const dw = document.getElementById('dw' + n);
-  const df = document.getElementById('df' + n);
-  const mf = document.getElementById('mf' + n);
-  if (!dw || !df) return;
+(function() {
 
-  const avail = dw.clientWidth;
-  const w = 1440;
-  const scale = Math.min(1, avail / w);
-  df.style.transform = 'scale(' + scale + ')';
-  df.style.width = w + 'px';
+  /* ── Fit desktop iframes (scale 1440px → full viewport) ── */
+  function fitDesk(n) {
+    var dbox = document.getElementById('dbox' + n);
+    var df   = document.getElementById('df' + n);
+    if (!dbox || !df) return;
 
-  /* height after scale */
-  function setH() {
-    try {
-      const h = df.contentDocument.body.scrollHeight;
-      dw.style.height = Math.ceil(h * scale) + 'px';
-      df.style.height = h + 'px';
-    } catch(e) {}
-  }
-  df.addEventListener('load', function() {
-    setH();
-    /* mobile height */
-    if (mf) {
+    var W = 1440;
+    var avail = document.documentElement.clientWidth;
+    var scale = Math.min(1, avail / W);
+
+    df.style.width  = W + 'px';
+    df.style.height = '0px';
+    df.style.transform = 'scale(' + scale + ')';
+
+    function applyH() {
       try {
-        const mh = mf.contentDocument.body.scrollHeight;
-        mf.style.height = mh + 'px';
+        var bh = df.contentDocument.body.scrollHeight;
+        df.style.height = bh + 'px';
+        dbox.style.height = Math.ceil(bh * scale) + 'px';
       } catch(e) {}
     }
-  });
-}
-
-/* ── Mobile iframe height ── */
-function fitMobile(n) {
-  const mf = document.getElementById('mf' + n);
-  if (!mf) return;
-  mf.addEventListener('load', function() {
-    try {
-      const mh = mf.contentDocument.body.scrollHeight;
-      mf.style.height = mh + 'px';
-    } catch(e) {}
-  });
-}
-
-for (let i = 1; i <= 12; i++) {
-  const n = String(i).padStart(2, '0');
-  fit(n);
-  fitMobile(n);
-}
-
-window.addEventListener('resize', function() {
-  for (let i = 1; i <= 12; i++) {
-    fit(String(i).padStart(2, '0'));
+    df.addEventListener('load', applyH);
+    /* fallback if already loaded */
+    try { if (df.contentDocument && df.contentDocument.readyState === 'complete') applyH(); } catch(e){}
   }
-});
 
-/* ── Copy buttons ── */
-document.querySelectorAll('.btn-copy').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    const url = btn.dataset.copy;
-    fetch(url)
-      .then(function(r) { return r.text(); })
-      .then(function(txt) {
-        navigator.clipboard.writeText(txt).then(function() {
-          const orig = btn.textContent;
-          btn.textContent = '✓ Copié !';
-          btn.classList.add('copied');
-          setTimeout(function() {
-            btn.textContent = orig;
-            btn.classList.remove('copied');
-          }, 2000);
-        });
-      })
-      .catch(function() {
-        btn.textContent = 'Erreur';
-        setTimeout(function() { btn.textContent = 'Copier le code'; }, 2000);
-      });
+  /* ── Fit mobile iframes (real 390px width) ── */
+  function fitMob(n) {
+    var mbox = document.getElementById('mbox' + n);
+    var mf   = document.getElementById('mf' + n);
+    if (!mbox || !mf) return;
+
+    mf.style.width  = '390px';
+    mf.style.height = '0px';
+    mbox.style.width = '390px';
+
+    function applyH() {
+      try {
+        var bh = mf.contentDocument.body.scrollHeight;
+        mf.style.height = bh + 'px';
+        mbox.style.height = bh + 'px';
+      } catch(e) {}
+    }
+    mf.addEventListener('load', applyH);
+    try { if (mf.contentDocument && mf.contentDocument.readyState === 'complete') applyH(); } catch(e){}
+  }
+
+  /* Init all 12 sections */
+  for (var i = 1; i <= 12; i++) {
+    var n = (i < 10 ? '0' : '') + i;
+    fitDesk(n);
+    fitMob(n);
+  }
+
+  /* Re-scale desktop on resize */
+  window.addEventListener('resize', function() {
+    for (var i = 1; i <= 12; i++) {
+      fitDesk((i < 10 ? '0' : '') + i);
+    }
   });
-});
+
+  /* ── Copy buttons ── */
+  document.querySelectorAll('.btn[data-copy]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var url = btn.dataset.copy;
+      fetch(url)
+        .then(function(r) { return r.text(); })
+        .then(function(txt) {
+          navigator.clipboard.writeText(txt).then(function() {
+            var orig = btn.textContent;
+            btn.textContent = '✓ Copié !';
+            btn.classList.add('copied');
+            setTimeout(function() {
+              btn.textContent = orig;
+              btn.classList.remove('copied');
+            }, 2000);
+          });
+        })
+        .catch(function() {
+          var orig = btn.textContent;
+          btn.textContent = 'Erreur';
+          setTimeout(function() { btn.textContent = orig; }, 2000);
+        });
+    });
+  });
+
+})();
 </script>
 
 </body>
