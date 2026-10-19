@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page About — Référence</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #000;
+  color: #EDEDED;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: #C8B568; text-decoration: none; }
+a:hover { color: #EDEDED; }
+
+/* ── NAV ── */
+.ref-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(0,0,0,0.97);
+  border-bottom: 1px solid #1F1F1F;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  gap: 32px;
+}
+.ref-nav__logo {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C8B568;
+  white-space: nowrap;
+}
+.ref-nav__links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.ref-nav__links a { color: #8A8A8A; }
+.ref-nav__links a:hover { color: #EDEDED; }
+
+/* ── LAYOUT ── */
+.ref-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── HERO ── */
+.ref-hero {
+  padding: 80px 0 64px;
+  border-bottom: 1px solid #1F1F1F;
+}
+.ref-hero__label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8A8A8A;
+  margin-bottom: 20px;
+}
+.ref-hero__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(26px, 4vw, 38px);
+  color: #EDEDED;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+.ref-hero__sub {
+  font-size: 16px;
+  color: #B8B8B8;
+  font-weight: 300;
+  max-width: 600px;
+  margin-bottom: 36px;
+}
+.ref-hero__meta {
+  font-size: 12px;
+  color: #8A8A8A;
+  letter-spacing: 0.06em;
+}
+.ref-cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+.ref-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid #C8B568;
+  color: #C8B568;
+  transition: background 0.2s, color 0.2s;
+}
+.ref-btn:hover { background: #C8B568; color: #000; }
+.ref-btn--ghost {
+  border-color: #1F1F1F;
+  color: #8A8A8A;
+}
+.ref-btn--ghost:hover { border-color: #8A8A8A; color: #EDEDED; background: transparent; }
+
+/* ── SECTIONS ── */
+.ref-section {
+  padding: 64px 0;
+  border-bottom: 1px solid #1F1F1F;
+}
+.ref-section:last-child { border-bottom: none; }
+
+.ref-section__number {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8A8A8A;
+  margin-bottom: 12px;
+}
+.ref-section__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: #EDEDED;
+  margin-bottom: 20px;
+}
+.ref-section__body {
+  font-size: 16px;
+  color: #B8B8B8;
+  font-weight: 300;
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+/* ── RULES ── */
+.ref-rule {
+  background: #0A0A0A;
+  border: 1px solid #1F1F1F;
+  border-left: 3px solid #C8B568;
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-size: 15px;
+  color: #B8B8B8;
+}
+.ref-rule strong { color: #EDEDED; }
+
+/* ── CODE BLOCK ── */
+.ref-code {
+  background: #0A0A0A;
+  border: 1px solid #1F1F1F;
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #B8B8B8;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+/* ── SECTION CARDS ── */
+.ref-grid {
+  display: grid;
+  gap: 2px;
+  margin-top: 32px;
+}
+.ref-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px;
+  background: #080808;
+  border: 1px solid #1F1F1F;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.ref-card:hover { border-color: #3A3A3A; }
+.ref-card:hover .ref-card__label { color: #EDEDED; }
+.ref-card__num {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #C8B568;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-top: 2px;
+  min-width: 32px;
+}
+.ref-card__label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #B8B8B8;
+  transition: color 0.2s;
+}
+.ref-card__desc {
+  font-size: 13px;
+  color: #8A8A8A;
+  font-weight: 300;
+  margin-top: 4px;
+}
+.ref-card__note {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #C8B568;
+  letter-spacing: 0.04em;
+}
+
+/* ── TOKENS TABLE ── */
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 14px;
+}
+.ref-table th {
+  text-align: left;
+  padding: 10px 16px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8A8A8A;
+  border-bottom: 1px solid #1F1F1F;
+  font-weight: 400;
+}
+.ref-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #111;
+  color: #B8B8B8;
+  vertical-align: top;
+}
+.ref-table td:first-child { color: #EDEDED; font-weight: 400; }
+.ref-table td code {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #C8B568;
+}
+
+/* ── CHECKLIST ── */
+.ref-checklist {
+  list-style: none;
+  margin: 16px 0;
+}
+.ref-checklist li {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 15px;
+  color: #B8B8B8;
+  border-bottom: 1px solid #0D0D0D;
+}
+.ref-checklist li::before {
+  content: '→';
+  color: #C8B568;
+  flex-shrink: 0;
+}
+
+/* ── ALERT ── */
+.ref-alert {
+  display: flex;
+  gap: 12px;
+  background: #0A0A0A;
+  border: 1px solid #2A2A2A;
+  border-left: 3px solid #8A8A8A;
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #8A8A8A;
+}
+.ref-alert--gold { border-left-color: #C8B568; color: #B8B8B8; }
+.ref-alert__icon { flex-shrink: 0; }
+
+/* ── FOOTER ── */
+.ref-footer {
+  background: #0A0A0A;
+  border-top: 1px solid #1F1F1F;
+  padding: 48px 32px;
+  text-align: center;
+  font-size: 12px;
+  color: #8A8A8A;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 600px) {
+  .ref-wrap { padding: 0 20px; }
+  .ref-nav { padding: 0 20px; gap: 16px; }
+  .ref-hero { padding: 48px 0 40px; }
+  .ref-card { flex-direction: column; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="ref-nav">
+  <div class="ref-nav__logo">Alta Male Lab — Référence</div>
+  <ul class="ref-nav__links">
+    <li><a href="#methode">Méthode</a></li>
+    <li><a href="#design">Design</a></li>
+    <li><a href="#sections">Sections</a></li>
+    <li><a href="#workflow">Workflow</a></li>
+    <li><a href="apercu/">Aperçu →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="ref-wrap">
+  <div class="ref-hero">
+    <p class="ref-hero__label">Page About EN — Référence intégrateur</p>
+    <h1 class="ref-hero__title">Page About ALTA MALE LAB —<br>rendu attendu et méthode Divi.</h1>
+    <p class="ref-hero__sub">
+      Ce document remplace tout échange verbal sur le rendu attendu. Il contient l'aperçu visuel final, la méthode d'intégration Divi section par section, les tokens design et les points de vérification.
+    </p>
+    <p class="ref-hero__meta">Version 1.0 &nbsp;·&nbsp; Octobre 2026 &nbsp;·&nbsp; 12 sections</p>
+    <div class="ref-cta-row">
+      <a href="apercu/" class="ref-btn">Voir l'aperçu immersif →</a>
+      <a href="README_ABOUT_EN.md" class="ref-btn ref-btn--ghost">README (guide technique)</a>
+    </div>
+  </div>
+</div>
+
+<!-- 01 LA RÈGLE -->
+<div class="ref-wrap">
+  <div class="ref-section" id="methode">
+    <p class="ref-section__number">01 — La règle</p>
+    <h2 class="ref-section__title">Un fichier HTML/CSS = un module Code Divi.</h2>
+    <p class="ref-section__body">
+      Chaque section de la page About est intégrée dans un <strong>Module Code</strong> Divi séparé. Aucun module Texte, Titre, Bouton ou Image Divi n'est utilisé. Tout le contenu et les styles sont dans le HTML/CSS du module.
+    </p>
+
+    <div class="ref-rule">
+      <strong>Règle absolue :</strong> ne jamais laisser Divi générer du CSS automatique sur ces sections. Le CSS de chaque module commence par un reset scoped et toutes les propriétés clés utilisent <code>!important</code>.
+    </div>
+
+    <p class="ref-section__body">Structure du module Code pour chaque section :</p>
+    <div class="ref-code">&lt;!-- ═══ S07 · THE FOUNDER ═══ --&gt;
+&lt;style&gt;
+  .alta-ab-s07-wrap *, .alta-ab-s07-wrap *::before, .alta-ab-s07-wrap *::after {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* ... styles spécifiques à la section ... */
+&lt;/style&gt;
+&lt;section class="alta-ab-s07-wrap"&gt;
+  &lt;!-- contenu HTML --&gt;
+&lt;/section&gt;</div>
+
+    <div class="ref-alert ref-alert--gold">
+      <span class="ref-alert__icon">→</span>
+      <span>Le préfixe de classes CSS est <code>alta-ab-sXX-</code> pour toutes les sections de la page About (ex. <code>alta-ab-s01-</code>, <code>alta-ab-s07-</code>). Cela évite tout conflit avec la Homepage ou d'autres pages.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 02 RÉGLAGES DIVI -->
+<div class="ref-wrap">
+  <div class="ref-section">
+    <p class="ref-section__number">02 — Réglages Divi</p>
+    <h2 class="ref-section__title">Configuration à appliquer avant d'intégrer.</h2>
+
+    <p class="ref-section__body">Sur la page About dans WordPress :</p>
+    <ul class="ref-checklist">
+      <li><strong>Footer global</strong> : désactiver sur cette page (Page Settings → Divi → Footer → None). La section S12 est la clôture éditoriale — aucun footer WordPress ne doit apparaître après.</li>
+      <li><strong>Header global</strong> : utiliser la navigation ALTA déjà en place (même nav que la Homepage).</li>
+      <li><strong>Fond de page</strong> : <code>#000000</code> — vérifier dans Customize → Body Background.</li>
+      <li><strong>Marges des sections Divi</strong> : mettre toutes les marges et paddings Divi à <code>0</code> — le padding est géré dans le CSS de chaque module.</li>
+      <li><strong>Largeur des colonnes</strong> : toujours une seule colonne par section (sauf S07 qui gère son layout 2 colonnes en CSS interne).</li>
+      <li><strong>Coller le code</strong> : dans le module Code, utiliser l'éditeur "Code" (pas "Visual") — ne jamais passer par l'éditeur visuel de WordPress qui encode les balises HTML.</li>
+    </ul>
+
+    <p class="ref-section__body" style="margin-top: 24px;">Google Fonts — à charger <strong>une seule fois</strong> dans le header global (functions.php ou Divi Theme Options → Integration → Add code to the &lt;head&gt;) :</p>
+    <div class="ref-code">&lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"&gt;</div>
+
+    <div class="ref-alert">
+      <span class="ref-alert__icon">⚠</span>
+      <span><strong>Police Gaoel</strong> (wordmark "ALTA MALE LAB" dans la nav) : déjà intégrée en base64 dans le fichier HTML de référence et dans la nav globale existante. Ne pas modifier, ne pas remplacer par un lien externe.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 03 DESIGN SYSTEM -->
+<div class="ref-wrap">
+  <div class="ref-section" id="design">
+    <p class="ref-section__number">03 — Design system</p>
+    <h2 class="ref-section__title">Tokens invariables.</h2>
+
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>Élément</th>
+          <th>Valeur</th>
+          <th>Usage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Fond</td><td><code>#000000</code></td><td>Toutes les sections</td></tr>
+        <tr><td>Fond alternatif</td><td><code>#0A0A0A</code></td><td>Footer uniquement</td></tr>
+        <tr><td>Texte principal</td><td><code>#EDEDED</code></td><td>Titres, éléments clés</td></tr>
+        <tr><td>Texte secondaire</td><td><code>#B8B8B8</code></td><td>Corps de texte courant</td></tr>
+        <tr><td>Texte discret</td><td><code>#8A8A8A</code></td><td>Labels, métadonnées</td></tr>
+        <tr><td>Accent gold</td><td><code>#C8B568</code></td><td>Numéros, accents, CTA</td></tr>
+        <tr><td>Séparateur</td><td><code>#1F1F1F</code></td><td>Ligne 1px entre sections</td></tr>
+        <tr><td>H1</td><td>Poppins 600</td><td>Titre principal (S01)</td></tr>
+        <tr><td>H2</td><td>Poppins 500</td><td>Titres de sections</td></tr>
+        <tr><td>Body</td><td>Lato 400 / 300</td><td>Texte courant / léger</td></tr>
+        <tr><td>Wordmark nav</td><td>Gaoel</td><td>"Alta Male Lab" uniquement</td></tr>
+        <tr><td>Max-width</td><td>760px centré</td><td>Contenu de toutes les sections</td></tr>
+        <tr><td>Padding section</td><td>120–160px vertical</td><td>Espace respiré entre sections</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ref-rule">
+      <strong>Interdit :</strong> animations, box-shadow, text-shadow, gradients, border-radius décoratif, transitions sur les titres, effets visuels de tout type. Si c'est sobre et lisible → validé. Si c'est "beau" mais distrayant → rejeté.
+    </div>
+  </div>
+</div>
+
+<!-- 04 SECTIONS -->
+<div class="ref-wrap">
+  <div class="ref-section" id="sections">
+    <p class="ref-section__number">04 — Les 12 sections</p>
+    <h2 class="ref-section__title">Structure complète de la page About.</h2>
+    <p class="ref-section__body">
+      Chaque carte ci-dessous correspond à un Module Code Divi. L'aperçu immersif montre le rendu final attendu.
+    </p>
+
+    <div class="ref-grid">
+
+      <div class="ref-card" id="s01">
+        <span class="ref-card__num">S01</span>
+        <div>
+          <div class="ref-card__label">WHO WRITES THIS</div>
+          <div class="ref-card__desc">Introduction éditoriale — voix du fondateur, question d'ouverture. Titre H1 Poppins 600. Corps Lato 300.</div>
+          <div class="ref-card__note">⚠ Le "?" est précédé d'une espace insécable <code>&amp;nbsp;</code> — typographie française/suisse.</div>
+        </div>
+      </div>
+
+      <div class="ref-card" id="s02">
+        <span class="ref-card__num">S02</span>
+        <div>
+          <div class="ref-card__label">NOT A BLOG</div>
+          <div class="ref-card__desc">Positionnement éditorial — ce que Alta Male Lab n'est pas. Liste Lato 400.</div>
+        </div>
+      </div>
+
+      <div class="ref-card" id="s03">
+        <span class="ref-card__num">S03</span>
+        <div>
+          <div class="ref-card__label">THE LONG GAME</div>
+          <div class="ref-card__desc">Définition de la philosophie centrale. Accent gold <code>#C8B568</code> sur "The Long Game".</div>
+        </div>
+      </div>
+
+      <div class="ref-card" id="s04">
+        <span class="ref-card__num">S04</span>
+        <div>
+          <div class="ref-card__label">THE ALTA FRAMEWORK</div>
+          <div class="ref-card__desc">Les 3 piliers biologiques : Metabolic Intelligence / Strength & Muscles / Mind & Nervous System. Numéros en gold, blocs verticaux.</div>
+        </div>
+      </div>
+
+      <div class="ref-card" id="s05">
+        <span class="ref-card__num">S05</span>
+        <div>
+          <div class="ref-card__label">FOR MEN 40+</div>
+          <div class="ref-card__desc">Définition de l'audience cible. Titre H2 Poppins 500, corps Lato 300.</div>
+        </div>
+      </div>
+
+      <div class="ref-card" id="s06">
+        <span class="ref-card__num">S06</span>
+        <div>
+          <div class="ref-card__label">NOT A COACH</div>
+          <div class="ref-card__desc">Différenciation — ce que le fondateur n'est pas. Ton direct et sobre.</div>
+        </div>
+      </div>
+
+      <div class="ref-card" id="s07">
+        <span class="ref-card__num">S07</span>
+        <div>
+          <div class="ref-card__label">THE FOUNDER</div>
+          <div class="ref-card__desc">Portrait du fondateur : layout 2 colonnes (texte gauche / photo droite) sur desktop. Photo 220×274px, noir et blanc.</div>
+          <div class="ref-card__note">⚠ Photo intégrée en base64 dans le HTML — ne pas remplacer par un lien image Divi.</div>
+        </div>
+      </div>
+
+      <div class="ref-card" id="s08">
+        <span class="ref-card__num">S08</span>
+        <div>
+          <div class="ref-card__label">THE MANIFESTO</div>
+          <div class="ref-card__desc">Extrait manifeste — citation éditoriale forte. Texte centré, Lato 300 italic, couleur <code>#B8B8B8</code>.</div>
+        </div>
+      </div>
+
+      <div class="ref-card" id="s09">
+        <span class="ref-card__num">S09</span>
+        <div>
+          <div class="ref-card__label">WHAT YOU FIND HERE</div>
+          <div class="ref-card__desc">Contenu de la plateforme — rubriques avec descriptif court. Puces ou tirets en gold.</div>
+        </div>
+      </div>
+
+      <div class="ref-card" id="s10">
+        <span class="ref-card__num">S10</span>
+        <div>
+          <div class="ref-card__label">THE ALTA CIRCLE</div>
+          <div class="ref-card__desc">Invitation à rejoindre la newsletter. CTA en gold <code>#C8B568</code>, hover <code>#EDEDED</code>.</div>
+        </div>
+      </div>
+
+      <div class="ref-card" id="s11">
+        <span class="ref-card__num">S11</span>
+        <div>
+          <div class="ref-card__label">ALTA BODY & MIND ACADEMY</div>
+          <div class="ref-card__desc">Pont vers la marque Academy. Lien vers le site ABMA — URL à confirmer lors de l'intégration.</div>
+        </div>
+      </div>
+
+      <div class="ref-card" id="s12">
+        <span class="ref-card__num">S12</span>
+        <div>
+          <div class="ref-card__label">CLOSING — THE LONG GAME</div>
+          <div class="ref-card__desc">Clôture éditoriale. Texte centré, Lato 300, couleur <code>#8A8A8A</code>.</div>
+          <div class="ref-card__note">⚠ Aucun footer WordPress après cette section — masquer le footer global sur cette page.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 05 WORKFLOW -->
+<div class="ref-wrap">
+  <div class="ref-section" id="workflow">
+    <p class="ref-section__number">05 — Workflow recommandé</p>
+    <h2 class="ref-section__title">Ordre de travail.</h2>
+
+    <ul class="ref-checklist">
+      <li>Ouvrir l'<a href="apercu/">aperçu immersif</a> sur un second écran — c'est la source de vérité visuelle</li>
+      <li>Créer une nouvelle page WordPress "About" (slug : <code>about</code>)</li>
+      <li>Passer en Divi Builder → Build from scratch</li>
+      <li>Désactiver le footer global : Page Settings → Divi → Footer → None</li>
+      <li>Intégrer les sections dans l'ordre S01 → S12, une section = un Module Code</li>
+      <li>Vérifier chaque section sur desktop (1440px) et mobile (390px)</li>
+      <li>Valider la nav active : lien "ABOUT" en état actif dans le menu</li>
+      <li>Valider le rendu final contre l'aperçu de référence</li>
+    </ul>
+
+    <div class="ref-alert ref-alert--gold">
+      <span class="ref-alert__icon">→</span>
+      <span>En cas de doute sur un détail visuel, l'aperçu immersif fait foi. Référencer la section par son numéro dans les échanges (ex. "question sur S07").</span>
+    </div>
+  </div>
+</div>
+
+<!-- 06 SUITE -->
+<div class="ref-wrap">
+  <div class="ref-section">
+    <p class="ref-section__number">06 — Prochaines pages</p>
+    <h2 class="ref-section__title">En attente de validation About EN.</h2>
+    <p class="ref-section__body">Les pages suivantes seront traitées dans le même format après validation de l'intégration About :</p>
+    <ul class="ref-checklist">
+      <li>About FR — version française (12 sections)</li>
+      <li>About DE — version allemande (12 sections)</li>
+      <li>Page Manifesto</li>
+      <li>Page Journal</li>
+      <li>Page Framework</li>
+      <li>Page Academy</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="ref-footer">
+  Alta Male Lab &nbsp;·&nbsp; Page About EN — Référence intégrateur &nbsp;·&nbsp; V1.0 &nbsp;·&nbsp; Octobre 2026
+  <br><br>
+  <a href="apercu/" style="color: #C8B568;">Aperçu immersif</a>
+  &nbsp;·&nbsp;
+  <a href="README_ABOUT_EN.md" style="color: #8A8A8A;">README</a>
+  &nbsp;·&nbsp;
+  <a href="https://altamalelab.github.io/hp-reference/" style="color: #8A8A8A;">← Homepage référence</a>
+</div>
+
+</body>
+</html>
