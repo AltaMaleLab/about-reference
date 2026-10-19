@@ -334,38 +334,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
   pointer-events: none;
 }
 
-/* ── Checklist ── */
-.checklist {
-  background: #0d0d0d;
-  border: 1px solid #1F1F1F;
-  border-radius: 4px;
-  padding: 20px 24px;
-  margin-bottom: 20px;
-}
-.checklist h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #8A8A8A;
-  margin-bottom: 14px;
-}
-.checklist ul { list-style: none; }
-.checklist ul li {
-  font-size: 13px;
-  color: #B8B8B8;
-  padding: 5px 0;
-  padding-left: 22px;
-  position: relative;
-}
-.checklist ul li::before {
-  content: '□';
-  position: absolute;
-  left: 0;
-  color: #C8B568;
-  font-size: 14px;
-}
-
 /* ── Actions ── */
 .sec__actions {
   display: flex;
@@ -426,7 +394,7 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
   <section class="intro">
     <h1>About Page — Guide d'intégration Divi</h1>
     <p>Ce document de référence présente les 12 sections de la page About d'Alta Male Lab, prêtes à intégrer dans WordPress/Divi via des <strong style="color:#EDEDED">modules Code</strong>. Chaque section est un fichier HTML autonome — coller tel quel dans le module Code Divi.</p>
-    <p>Chaque section est prévisualisée en mode desktop (1440px mis à l'échelle) et mobile (390px réel), avec une checklist de vérification, un bouton pour copier le code et un lien de téléchargement du fichier.</p>
+    <p>Chaque section est prévisualisée en mode desktop (1440px mis à l'échelle) et mobile (390px réel), avec un bouton pour copier le code et un lien de téléchargement du fichier.</p>
   </section>
 
   <!-- ── La règle ── -->
@@ -603,16 +571,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
           </div>
         </div>
       </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>H1 "The Long Game for Men 40+" — Poppins 600, blanc #EDEDED, grande taille</li>
-          <li>Sous-titre ou accroche — Lato 300, #B8B8B8</li>
-          <li>Fond #000000 full-width, aucune bordure visible</li>
-          <li>Padding top/bottom 160px desktop, 120px mobile</li>
-          <li>Aucun élément Divi visible (row, colonne, etc.)</li>
-        </ul>
-      </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s01-hero.html">Copier le code</button>
         <a class="btn-dl" href="code/about-s01-hero.html" download>↓ Télécharger le fichier</a>
@@ -638,17 +596,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
             <iframe src="preview/s02.html" id="mf02" scrolling="no" title="S02 Mobile"></iframe>
           </div>
         </div>
-      </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>H2 "The Long Game" — Poppins 500, #EDEDED</li>
-          <li>Séparateur fin #1F1F1F en haut de section</li>
-          <li>Lignes "Not through urgency / Not through shortcuts / Not through extreme optimization" — #8A8A8A</li>
-          <li>"But through strategy." — Lato 700, #EDEDED</li>
-          <li>Lignes "Through strength / Through metabolic stability…" — #B8B8B8</li>
-          <li>Closing en gras : "physically capable, mentally clear, and emotionally stable" — #EDEDED</li>
-        </ul>
       </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s02-the-long-game.html">Copier le code</button>
@@ -676,15 +623,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
           </div>
         </div>
       </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>Trois mots centrés : "Energy." / "Structure." / "Regulation." — Poppins 500, taille grande</li>
-          <li>Rendu épuré, centré, minimaliste — pas de H2 classique</li>
-          <li>Séparateur #1F1F1F en haut</li>
-          <li>Fond #000000, aucun élément décoratif superflu</li>
-        </ul>
-      </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s03-core-principle.html">Copier le code</button>
         <a class="btn-dl" href="code/about-s03-core-principle.html" download>↓ Télécharger le fichier</a>
@@ -710,16 +648,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
             <iframe src="preview/s04.html" id="mf04" scrolling="no" title="S04 Mobile"></iframe>
           </div>
         </div>
-      </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>H2 "What Alta Male Lab Is" — Poppins 500, #EDEDED</li>
-          <li>Séparateur #1F1F1F en haut</li>
-          <li>Corps de texte — Lato 300, 18px, #B8B8B8, line-height 1.8</li>
-          <li>Emphases en gras bien visibles en #EDEDED</li>
-          <li>Aucun bullet point, aucune liste — texte éditorial uniquement</li>
-        </ul>
       </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s04-what-alta-male-lab-is.html">Copier le code</button>
@@ -747,16 +675,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
           </div>
         </div>
       </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>H2 "Who Is the Alta Male" — Poppins 500, #EDEDED</li>
-          <li>Portrait de l'homme ALTA — traits empilés, couleurs hiérarchisées</li>
-          <li>Séparateur #1F1F1F en haut</li>
-          <li>Lignes en #8A8A8A bien distinctes des lignes #B8B8B8</li>
-          <li>Aucune image — texte uniquement</li>
-        </ul>
-      </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s05-who-is-the-alta-male.html">Copier le code</button>
         <a class="btn-dl" href="code/about-s05-who-is-the-alta-male.html" download>↓ Télécharger le fichier</a>
@@ -782,15 +700,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
             <iframe src="preview/s06.html" id="mf06" scrolling="no" title="S06 Mobile"></iframe>
           </div>
         </div>
-      </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>Statement d'ouverture "Alta means higher." — typographie forte</li>
-          <li>Séparateur #1F1F1F en haut</li>
-          <li>Rendu épuré et philosophique — pas de liste, pas de structure complexe</li>
-          <li>Corps de texte Lato 300, 18px, #B8B8B8</li>
-        </ul>
       </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s06-the-meaning-of-alta.html">Copier le code</button>
@@ -818,16 +727,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
           </div>
         </div>
       </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>Portrait d'Anthony en base64 — photo visible, rendu net (~3.8 MB, normal)</li>
-          <li>H2 "About Anthony" — Poppins 500, #EDEDED</li>
-          <li>Séparateur #1F1F1F en haut</li>
-          <li>Bio — Lato 300, 18px, #B8B8B8, lecture confortable</li>
-          <li>Aucune image externe — auto-contenu, pas de dépendance réseau pour la photo</li>
-        </ul>
-      </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s07-about-anthony.html">Copier le code</button>
         <a class="btn-dl" href="code/about-s07-about-anthony.html" download>↓ Télécharger le fichier</a>
@@ -853,17 +752,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
             <iframe src="preview/s08.html" id="mf08" scrolling="no" title="S08 Mobile"></iframe>
           </div>
         </div>
-      </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>H2 "— The Alta Framework —" — Poppins 500, tirets encadrants, #EDEDED</li>
-          <li>Séparateur #1F1F1F en haut</li>
-          <li>Trois mots empilés : "Energy. / Structure. / Regulation." — Lato 700, #EDEDED</li>
-          <li>3 piliers avec bordure gauche #C8B568 : Metabolic Intelligence / Strength &amp; Muscles / Mind &amp; Nervous System</li>
-          <li>Noms des piliers en gold #C8B568, Poppins 500, uppercase</li>
-          <li>Closing "Energy stabilizes. / The body becomes resilient. / Longevity becomes a strategy." en gras</li>
-        </ul>
       </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s08-the-alta-framework.html">Copier le code</button>
@@ -891,15 +779,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
           </div>
         </div>
       </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>H2 "A Different Vision of Masculinity" — Poppins 500, #EDEDED</li>
-          <li>Séparateur #1F1F1F en haut</li>
-          <li>Corps de texte — ton éditorial, sobre, sans clichés de masculinité</li>
-          <li>Lato 300, 18px, #B8B8B8, line-height 1.8</li>
-        </ul>
-      </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s09-a-different-vision-of-masculinity.html">Copier le code</button>
         <a class="btn-dl" href="code/about-s09-a-different-vision-of-masculinity.html" download>↓ Télécharger le fichier</a>
@@ -925,16 +804,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
             <iframe src="preview/s10.html" id="mf10" scrolling="no" title="S10 Mobile"></iframe>
           </div>
         </div>
-      </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>H2 "A Journal for the Second Half of Life" — Poppins 500, #EDEDED</li>
-          <li>Séparateur #1F1F1F en haut</li>
-          <li>"the second half of a man's life." en gras, #EDEDED</li>
-          <li>Lignes empilées "The years where strength must be maintained…" — #8A8A8A</li>
-          <li>Closing "The Long Game is learning to navigate these years with intelligence." — #B8B8B8</li>
-        </ul>
       </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s10-a-journal-for-the-second-half-of-life.html">Copier le code</button>
@@ -962,17 +831,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
           </div>
         </div>
       </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>H2 "ALTA &amp; Men's Health" — Poppins 500, #EDEDED</li>
-          <li>Séparateur #1F1F1F en haut</li>
-          <li>Bloc Movember — eyebrow gold uppercase, corps #B8B8B8</li>
-          <li>Bloc männer.ch — même structure, séparateur interne #1F1F1F</li>
-          <li>CTA links "Join or support…" et "Discover männer.ch →" — gold #C8B568, souligné or</li>
-          <li>⚠️ Links <code>href="#"</code> à remplacer par Laurent avant mise en ligne</li>
-        </ul>
-      </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s11-alta-mens-health.html">Copier le code</button>
         <a class="btn-dl" href="code/about-s11-alta-mens-health.html" download>↓ Télécharger le fichier</a>
@@ -998,18 +856,6 @@ article.sec:last-child { border-bottom: none; margin-bottom: 0; }
             <iframe src="preview/s12.html" id="mf12" scrolling="no" title="S12 Mobile"></iframe>
           </div>
         </div>
-      </div>
-      <div class="checklist">
-        <h3>À vérifier</h3>
-        <ul>
-          <li>"If you believe aging can be a process of mastery rather than decline…" — Lato 300, #B8B8B8</li>
-          <li>Séparateur or 40px (#C8B568) bien visible entre intro et closing</li>
-          <li>"This moment isn't the end. / It's a starting point." — Lato 700, #EDEDED</li>
-          <li>"Welcome to Alta Male Lab." — Lato 300, #B8B8B8</li>
-          <li>"Play the Long Game." — Poppins 300, grande taille clamp(28px, 4vw, 44px), #EDEDED</li>
-          <li>Aucun CTA, aucun lien — section purement typographique</li>
-          <li>Padding final généreux (160px) — section de clôture</li>
-        </ul>
       </div>
       <div class="sec__actions">
         <button class="btn-copy" data-copy="code/about-s12-welcome.html">Copier le code</button>
