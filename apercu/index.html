@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>ALTA MALE LAB — About</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   ALTA MALE LAB — About Page — Final Render
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #000000;
+  font-family: 'Lato', sans-serif;
+  color: #EDEDED;
+  min-height: 100vh;
+}
+
+/* ---- NAVIGATION ---- */
+.alta-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,0.96);
+  border-bottom: 1px solid #1F1F1F;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 40px;
+}
+
+.alta-nav__logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.alta-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.alta-nav__links a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8A8A8A;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.alta-nav__links a:hover,
+.alta-nav__links a.active { color: #EDEDED; }
+
+.alta-nav__lang {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.alta-nav__lang a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8A8A8A;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.alta-nav__lang a.active { color: #C8B568; }
+.alta-nav__lang a:hover { color: #EDEDED; }
+
+.alta-nav__lang span {
+  font-size: 10px;
+  color: #2A2A2A;
+}
+
+/* ---- PAGE WRAPPER ---- */
+.alta-page {
+  padding-top: 56px;
+}
+
+/* ============================================================
+   S01 — HERO
+   ============================================================ */
+.alta-ab-s01, .alta-ab-s01 *, .alta-ab-s01 *::before, .alta-ab-s01 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s01 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 160px 24px !important; position: relative !important;
+  font-family: 'Lato', sans-serif !important;
+}
+.alta-ab-s01__inner {
+  max-width: 760px !important; margin: 0 auto !important; padding: 0 !important;
+}
+.alta-ab-s01__eyebrow {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: 12px !important; letter-spacing: 0.22em !important;
+  text-transform: uppercase !important; color: #C8B568 !important;
+  margin-bottom: 40px !important; display: block !important;
+}
+.alta-ab-s01__title {
+  font-family: 'Poppins', sans-serif !important; font-weight: 600 !important;
+  font-size: clamp(36px, 5vw, 56px) !important; line-height: 1.1 !important;
+  color: #EDEDED !important; margin-bottom: 48px !important; display: block !important;
+}
+.alta-ab-s01__divider {
+  width: 40px !important; height: 1px !important; background-color: #C8B568 !important;
+  margin-bottom: 48px !important; display: block !important; border: none !important;
+}
+.alta-ab-s01__lead {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #EDEDED !important;
+  margin-bottom: 40px !important; display: block !important;
+}
+.alta-ab-s01__body {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s01__lines { margin-bottom: 32px !important; display: block !important; }
+.alta-ab-s01__lines p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s01__pivot {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 40px !important; display: block !important;
+}
+.alta-ab-s01__question {
+  font-family: 'Poppins', sans-serif !important; font-weight: 300 !important;
+  font-size: clamp(20px, 2.8vw, 28px) !important; line-height: 1.5 !important;
+  color: #EDEDED !important; margin-bottom: 0 !important; display: block !important;
+}
+.alta-ab-s01__question em { font-style: italic !important; color: #C8B568 !important; }
+@media (max-width: 768px) { .alta-ab-s01 { padding: 120px 24px !important; } }
+
+/* ============================================================
+   S02 — THE LONG GAME
+   ============================================================ */
+.alta-ab-s02, .alta-ab-s02 *, .alta-ab-s02 *::before, .alta-ab-s02 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s02 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 140px 24px !important; position: relative !important;
+  font-family: 'Lato', sans-serif !important;
+}
+.alta-ab-s02::before {
+  content: '' !important; display: block !important; width: 100% !important;
+  max-width: 760px !important; height: 1px !important;
+  background-color: #1F1F1F !important; position: absolute !important;
+  top: 0 !important; left: 50% !important; transform: translateX(-50%) !important;
+}
+.alta-ab-s02__inner { max-width: 760px !important; margin: 0 auto !important; padding: 0 !important; }
+.alta-ab-s02__title {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: clamp(24px, 3vw, 32px) !important; line-height: 1.2 !important;
+  color: #EDEDED !important; margin-bottom: 48px !important; display: block !important;
+}
+.alta-ab-s02__body {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s02__body strong { font-weight: 700 !important; color: #EDEDED !important; }
+.alta-ab-s02__negatives { margin-bottom: 32px !important; display: block !important; }
+.alta-ab-s02__negatives p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s02__pivot {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #EDEDED !important;
+  margin-bottom: 32px !important; display: block !important;
+}
+.alta-ab-s02__positives { margin-bottom: 32px !important; display: block !important; }
+.alta-ab-s02__positives p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #B8B8B8 !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s02__statement {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #EDEDED !important;
+  margin-bottom: 0 !important; display: block !important;
+}
+@media (max-width: 768px) { .alta-ab-s02 { padding: 120px 24px !important; } }
+
+/* ============================================================
+   S03 — CORE PRINCIPLE
+   ============================================================ */
+.alta-ab-s03, .alta-ab-s03 *, .alta-ab-s03 *::before, .alta-ab-s03 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s03 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 140px 24px !important; position: relative !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+.alta-ab-s03::before {
+  content: '' !important; display: block !important; width: 100% !important;
+  max-width: 760px !important; height: 1px !important;
+  background-color: #1F1F1F !important; position: absolute !important;
+  top: 0 !important; left: 50% !important; transform: translateX(-50%) !important;
+}
+.alta-ab-s03__inner {
+  max-width: 760px !important; margin: 0 auto !important;
+  padding: 0 !important; text-align: center !important;
+}
+.alta-ab-s03__label {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: 12px !important; letter-spacing: 0.28em !important;
+  text-transform: uppercase !important; color: #8A8A8A !important;
+  margin-bottom: 56px !important; display: block !important;
+}
+.alta-ab-s03__word {
+  font-family: 'Poppins', sans-serif !important; font-weight: 300 !important;
+  font-size: clamp(28px, 4vw, 44px) !important; line-height: 1.2 !important;
+  color: #EDEDED !important; display: block !important; margin-bottom: 24px !important;
+}
+.alta-ab-s03__word:last-child { margin-bottom: 0 !important; }
+@media (max-width: 768px) { .alta-ab-s03 { padding: 120px 24px !important; } }
+
+/* ============================================================
+   S04 — WHAT ALTA MALE LAB IS
+   ============================================================ */
+.alta-ab-s04, .alta-ab-s04 *, .alta-ab-s04 *::before, .alta-ab-s04 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s04 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 140px 24px !important; position: relative !important;
+  font-family: 'Lato', sans-serif !important;
+}
+.alta-ab-s04::before {
+  content: '' !important; display: block !important; width: 100% !important;
+  max-width: 760px !important; height: 1px !important;
+  background-color: #1F1F1F !important; position: absolute !important;
+  top: 0 !important; left: 50% !important; transform: translateX(-50%) !important;
+}
+.alta-ab-s04__inner { max-width: 760px !important; margin: 0 auto !important; padding: 0 !important; }
+.alta-ab-s04__title {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: clamp(24px, 3vw, 32px) !important; line-height: 1.2 !important;
+  color: #EDEDED !important; margin-bottom: 48px !important; display: block !important;
+}
+.alta-ab-s04__definition {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s04__definition strong { font-weight: 700 !important; color: #EDEDED !important; }
+.alta-ab-s04__body {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 40px !important; display: block !important;
+}
+.alta-ab-s04__intersect-label {
+  font-family: 'Lato', sans-serif !important; font-weight: 400 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s04__list {
+  margin-bottom: 48px !important; padding-left: 0 !important;
+  list-style: none !important; display: block !important;
+}
+.alta-ab-s04__list li {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 8px !important; padding-left: 20px !important; position: relative !important;
+}
+.alta-ab-s04__list li::before {
+  content: '—' !important; position: absolute !important; left: 0 !important;
+  color: #C8B568 !important; font-weight: 400 !important;
+}
+.alta-ab-s04__list li:last-child { margin-bottom: 0 !important; }
+.alta-ab-s04__not {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #8A8A8A !important;
+  margin-bottom: 16px !important; display: block !important;
+}
+.alta-ab-s04__closing {
+  font-family: 'Lato', sans-serif !important; font-weight: 400 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #EDEDED !important;
+  margin-bottom: 0 !important; display: block !important;
+}
+.alta-ab-s04__closing strong { font-weight: 700 !important; color: #EDEDED !important; }
+@media (max-width: 768px) { .alta-ab-s04 { padding: 120px 24px !important; } }
+
+/* ============================================================
+   S05 — WHO IS THE ALTA MALE
+   ============================================================ */
+.alta-ab-s05, .alta-ab-s05 *, .alta-ab-s05 *::before, .alta-ab-s05 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s05 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 140px 24px !important; position: relative !important;
+  font-family: 'Lato', sans-serif !important;
+}
+.alta-ab-s05::before {
+  content: '' !important; display: block !important; width: 100% !important;
+  max-width: 760px !important; height: 1px !important;
+  background-color: #1F1F1F !important; position: absolute !important;
+  top: 0 !important; left: 50% !important; transform: translateX(-50%) !important;
+}
+.alta-ab-s05__inner { max-width: 760px !important; margin: 0 auto !important; padding: 0 !important; }
+.alta-ab-s05__label {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: 12px !important; letter-spacing: 0.28em !important;
+  text-transform: uppercase !important; color: #8A8A8A !important;
+  margin-bottom: 40px !important; display: block !important;
+}
+.alta-ab-s05__title {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: clamp(24px, 3vw, 32px) !important; line-height: 1.2 !important;
+  color: #EDEDED !important; margin-bottom: 48px !important; display: block !important;
+}
+.alta-ab-s05__not-lines { margin-bottom: 32px !important; display: block !important; }
+.alta-ab-s05__not-lines p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s05__not-lines p strong { font-weight: 700 !important; letter-spacing: 0.02em !important; color: #EDEDED !important; }
+.alta-ab-s05__trajectory {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 48px !important; display: block !important;
+}
+.alta-ab-s05__trajectory strong { font-weight: 700 !important; letter-spacing: 0.02em !important; color: #EDEDED !important; }
+.alta-ab-s05__actions { margin-bottom: 48px !important; display: block !important; }
+.alta-ab-s05__actions p {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  letter-spacing: 0.02em !important; font-size: 18px !important;
+  line-height: 1.7 !important; color: #EDEDED !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s05__body {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s05__rules { margin-bottom: 24px !important; display: block !important; }
+.alta-ab-s05__rules p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s05__adapts {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  letter-spacing: 0.02em !important; font-size: 18px !important;
+  line-height: 1.8 !important; color: #EDEDED !important;
+  margin-bottom: 32px !important; display: block !important;
+}
+.alta-ab-s05__habits { margin-bottom: 32px !important; display: block !important; }
+.alta-ab-s05__habits p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #B8B8B8 !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s05__pairs { margin-bottom: 48px !important; display: block !important; }
+.alta-ab-s05__pairs p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #B8B8B8 !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s05__divider {
+  width: 40px !important; height: 1px !important; background-color: #C8B568 !important;
+  margin-bottom: 48px !important; display: block !important; border: none !important;
+}
+.alta-ab-s05__closing-strong { margin-bottom: 48px !important; display: block !important; }
+.alta-ab-s05__closing-strong p {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  letter-spacing: 0.02em !important; font-size: 18px !important;
+  line-height: 1.7 !important; color: #EDEDED !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s05__final { margin-bottom: 16px !important; display: block !important; }
+.alta-ab-s05__final p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s05__longer {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  letter-spacing: 0.02em !important; font-size: 18px !important;
+  line-height: 1.8 !important; color: #EDEDED !important;
+  margin-bottom: 0 !important; display: block !important;
+}
+@media (max-width: 768px) { .alta-ab-s05 { padding: 120px 24px !important; } }
+
+/* ============================================================
+   S06 — THE MEANING OF ALTA
+   ============================================================ */
+.alta-ab-s06, .alta-ab-s06 *, .alta-ab-s06 *::before, .alta-ab-s06 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s06 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 140px 24px !important; position: relative !important;
+  font-family: 'Lato', sans-serif !important;
+}
+.alta-ab-s06::before {
+  content: '' !important; display: block !important; width: 100% !important;
+  max-width: 760px !important; height: 1px !important;
+  background-color: #1F1F1F !important; position: absolute !important;
+  top: 0 !important; left: 50% !important; transform: translateX(-50%) !important;
+}
+.alta-ab-s06__inner { max-width: 760px !important; margin: 0 auto !important; padding: 0 !important; }
+.alta-ab-s06__label {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: 12px !important; letter-spacing: 0.28em !important;
+  text-transform: uppercase !important; color: #8A8A8A !important;
+  margin-bottom: 40px !important; display: block !important;
+}
+.alta-ab-s06__opening {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s06__opening strong { font-weight: 700 !important; letter-spacing: 0.02em !important; color: #EDEDED !important; }
+.alta-ab-s06__not-lines { margin-bottom: 48px !important; display: block !important; }
+.alta-ab-s06__not-lines p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s06__divider {
+  width: 40px !important; height: 1px !important; background-color: #C8B568 !important;
+  margin-bottom: 48px !important; display: block !important; border: none !important;
+}
+.alta-ab-s06__higher-lines { margin-bottom: 48px !important; display: block !important; }
+.alta-ab-s06__higher-lines p {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  letter-spacing: 0.02em !important; font-size: 18px !important;
+  line-height: 1.7 !important; color: #EDEDED !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s06__closing {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 0 !important; display: block !important;
+}
+@media (max-width: 768px) { .alta-ab-s06 { padding: 120px 24px !important; } }
+
+/* ============================================================
+   S07 — ABOUT ANTHONY (portrait base64 — voir note)
+   ============================================================ */
+.alta-ab-s07, .alta-ab-s07 *, .alta-ab-s07 *::before, .alta-ab-s07 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s07 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 140px 24px !important; position: relative !important;
+  font-family: 'Lato', sans-serif !important;
+}
+.alta-ab-s07::before {
+  content: '' !important; display: block !important; width: 100% !important;
+  max-width: 760px !important; height: 1px !important;
+  background-color: #1F1F1F !important; position: absolute !important;
+  top: 0 !important; left: 50% !important; transform: translateX(-50%) !important;
+}
+.alta-ab-s07__inner { max-width: 760px !important; margin: 0 auto !important; padding: 0 !important; }
+.alta-ab-s07__header {
+  display: flex !important; align-items: flex-start !important;
+  gap: 56px !important; margin-bottom: 64px !important;
+}
+.alta-ab-s07__portrait-wrap { flex: 0 0 220px !important; width: 220px !important; }
+.alta-ab-s07__portrait {
+  display: block !important; width: 220px !important; height: 274px !important;
+  object-fit: cover !important; object-position: center top !important;
+  filter: grayscale(100%) !important;
+}
+.alta-ab-s07__intro { flex: 1 !important; padding-top: 4px !important; }
+.alta-ab-s07__title {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: clamp(24px, 3vw, 32px) !important; line-height: 1.2 !important;
+  color: #EDEDED !important; margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s07__credential {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: 12px !important; letter-spacing: 0.22em !important;
+  text-transform: uppercase !important; color: #C8B568 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s07__lead {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  letter-spacing: 0.02em !important; font-size: 18px !important;
+  line-height: 1.7 !important; color: #EDEDED !important;
+  margin-bottom: 0 !important; display: block !important;
+}
+.alta-ab-s07__body {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s07__body strong { font-weight: 700 !important; letter-spacing: 0.02em !important; color: #EDEDED !important; }
+.alta-ab-s07__word {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #8A8A8A !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s07__lines { margin-bottom: 24px !important; display: block !important; }
+.alta-ab-s07__lines p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #B8B8B8 !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s07__divider {
+  width: 40px !important; height: 1px !important; background-color: #C8B568 !important;
+  margin-bottom: 48px !important; margin-top: 48px !important;
+  display: block !important; border: none !important;
+}
+.alta-ab-s07__conviction {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s07__conviction strong { font-weight: 700 !important; letter-spacing: 0.02em !important; color: #EDEDED !important; }
+.alta-ab-s07__closing {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; display: block !important;
+}
+@media (max-width: 680px) {
+  .alta-ab-s07 { padding: 120px 24px !important; }
+  .alta-ab-s07__header { flex-direction: column !important; gap: 40px !important; }
+  .alta-ab-s07__portrait-wrap { flex: none !important; width: 100% !important; max-width: 280px !important; }
+  .alta-ab-s07__portrait { width: 100% !important; height: auto !important; aspect-ratio: 4 / 5 !important; }
+}
+
+/* ============================================================
+   S08 — THE ALTA FRAMEWORK
+   ============================================================ */
+.alta-ab-s08, .alta-ab-s08 *, .alta-ab-s08 *::before, .alta-ab-s08 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s08 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 140px 24px !important; position: relative !important;
+  font-family: 'Lato', sans-serif !important;
+}
+.alta-ab-s08::before {
+  content: '' !important; display: block !important; width: 100% !important;
+  max-width: 760px !important; height: 1px !important;
+  background-color: #1F1F1F !important; position: absolute !important;
+  top: 0 !important; left: 50% !important; transform: translateX(-50%) !important;
+}
+.alta-ab-s08__inner { max-width: 760px !important; margin: 0 auto !important; padding: 0 !important; }
+.alta-ab-s08__title {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: clamp(24px, 3vw, 32px) !important; line-height: 1.2 !important;
+  color: #EDEDED !important; margin-bottom: 48px !important; display: block !important;
+}
+.alta-ab-s08__intro {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 8px !important; display: block !important;
+}
+.alta-ab-s08__logic {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  letter-spacing: 0.02em !important; font-size: 18px !important;
+  line-height: 1.8 !important; color: #EDEDED !important;
+  margin-bottom: 48px !important; display: block !important;
+}
+.alta-ab-s08__three-words { margin-bottom: 64px !important; display: block !important; }
+.alta-ab-s08__three-words p {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  letter-spacing: 0.02em !important; font-size: 18px !important;
+  line-height: 1.7 !important; color: #EDEDED !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s08__pillars-intro {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 48px !important; display: block !important;
+}
+.alta-ab-s08__pillar {
+  margin-bottom: 48px !important; display: block !important;
+  padding-left: 24px !important; border-left: 1px solid #C8B568 !important;
+}
+.alta-ab-s08__pillar:last-of-type { margin-bottom: 64px !important; }
+.alta-ab-s08__pillar-name {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: 14px !important; letter-spacing: 0.12em !important;
+  text-transform: uppercase !important; color: #C8B568 !important;
+  margin-bottom: 12px !important; display: block !important;
+}
+.alta-ab-s08__pillar-desc {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 0 !important; display: block !important;
+}
+.alta-ab-s08__closing { margin-bottom: 0 !important; display: block !important; }
+.alta-ab-s08__closing p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #B8B8B8 !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s08__closing p:first-child { margin-bottom: 24px !important; }
+.alta-ab-s08__closing p strong { font-weight: 700 !important; letter-spacing: 0.02em !important; color: #EDEDED !important; }
+@media (max-width: 768px) { .alta-ab-s08 { padding: 120px 24px !important; } }
+
+/* ============================================================
+   S09 — A DIFFERENT VISION OF MASCULINITY
+   ============================================================ */
+.alta-ab-s09, .alta-ab-s09 *, .alta-ab-s09 *::before, .alta-ab-s09 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s09 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 140px 24px !important; position: relative !important;
+  font-family: 'Lato', sans-serif !important;
+}
+.alta-ab-s09::before {
+  content: '' !important; display: block !important; width: 100% !important;
+  max-width: 760px !important; height: 1px !important;
+  background-color: #1F1F1F !important; position: absolute !important;
+  top: 0 !important; left: 50% !important; transform: translateX(-50%) !important;
+}
+.alta-ab-s09__inner { max-width: 760px !important; margin: 0 auto !important; padding: 0 !important; }
+.alta-ab-s09__title {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: clamp(24px, 3vw, 32px) !important; line-height: 1.2 !important;
+  color: #EDEDED !important; margin-bottom: 48px !important; display: block !important;
+}
+.alta-ab-s09__body {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s09__triple { margin-bottom: 48px !important; display: block !important; }
+.alta-ab-s09__triple p {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  letter-spacing: 0.02em !important; font-size: 18px !important;
+  line-height: 1.7 !important; color: #EDEDED !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s09__levels { margin-bottom: 0 !important; display: block !important; }
+.alta-ab-s09__levels p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+@media (max-width: 768px) { .alta-ab-s09 { padding: 120px 24px !important; } }
+
+/* ============================================================
+   S10 — A JOURNAL FOR THE SECOND HALF OF LIFE
+   ============================================================ */
+.alta-ab-s10, .alta-ab-s10 *, .alta-ab-s10 *::before, .alta-ab-s10 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s10 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 140px 24px !important; position: relative !important;
+  font-family: 'Lato', sans-serif !important;
+}
+.alta-ab-s10::before {
+  content: '' !important; display: block !important; width: 100% !important;
+  max-width: 760px !important; height: 1px !important;
+  background-color: #1F1F1F !important; position: absolute !important;
+  top: 0 !important; left: 50% !important; transform: translateX(-50%) !important;
+}
+.alta-ab-s10__inner { max-width: 760px !important; margin: 0 auto !important; padding: 0 !important; }
+.alta-ab-s10__title {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: clamp(24px, 3vw, 32px) !important; line-height: 1.2 !important;
+  color: #EDEDED !important; margin-bottom: 48px !important; display: block !important;
+}
+.alta-ab-s10__intro {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s10__focus {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 32px !important; display: block !important;
+}
+.alta-ab-s10__focus strong { font-weight: 700 !important; letter-spacing: 0.02em !important; color: #EDEDED !important; }
+.alta-ab-s10__years { margin-bottom: 48px !important; display: block !important; }
+.alta-ab-s10__years p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s10__closing {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 0 !important; display: block !important;
+}
+.alta-ab-s10__closing strong { font-weight: 700 !important; letter-spacing: 0.02em !important; color: #EDEDED !important; }
+@media (max-width: 768px) { .alta-ab-s10 { padding: 120px 24px !important; } }
+
+/* ============================================================
+   S11 — ALTA & MEN'S HEALTH
+   ============================================================ */
+.alta-ab-s11, .alta-ab-s11 *, .alta-ab-s11 *::before, .alta-ab-s11 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s11 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 140px 24px !important; position: relative !important;
+  font-family: 'Lato', sans-serif !important;
+}
+.alta-ab-s11::before {
+  content: '' !important; display: block !important; width: 100% !important;
+  max-width: 760px !important; height: 1px !important;
+  background-color: #1F1F1F !important; position: absolute !important;
+  top: 0 !important; left: 50% !important; transform: translateX(-50%) !important;
+}
+.alta-ab-s11__inner { max-width: 760px !important; margin: 0 auto !important; padding: 0 !important; }
+.alta-ab-s11__title {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: clamp(24px, 3vw, 32px) !important; line-height: 1.2 !important;
+  color: #EDEDED !important; margin-bottom: 48px !important; display: block !important;
+}
+.alta-ab-s11__intro {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 16px !important; display: block !important;
+}
+.alta-ab-s11__conviction {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 64px !important; display: block !important;
+}
+.alta-ab-s11__conviction strong { font-weight: 700 !important; color: #EDEDED !important; }
+.alta-ab-s11__block { margin-bottom: 56px !important; display: block !important; }
+.alta-ab-s11__cause-name {
+  font-family: 'Poppins', sans-serif !important; font-weight: 500 !important;
+  font-size: 14px !important; letter-spacing: 0.18em !important;
+  text-transform: uppercase !important; color: #C8B568 !important;
+  margin-bottom: 20px !important; display: block !important;
+}
+.alta-ab-s11__cause-body {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 16px !important; display: block !important;
+}
+.alta-ab-s11__issues { margin-bottom: 16px !important; display: block !important; }
+.alta-ab-s11__issues p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s11__transition {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s11__invite {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 24px !important; display: block !important;
+}
+.alta-ab-s11__cta {
+  display: inline-block !important; font-family: 'Poppins', sans-serif !important;
+  font-weight: 500 !important; font-size: 12px !important;
+  letter-spacing: 0.18em !important; text-transform: uppercase !important;
+  color: #C8B568 !important; text-decoration: none !important;
+  border-bottom: 1px solid #C8B568 !important; padding-bottom: 2px !important;
+}
+.alta-ab-s11__rule {
+  width: 100% !important; max-width: 760px !important;
+  height: 1px !important; background-color: #1F1F1F !important;
+  margin-bottom: 56px !important; display: block !important; border: none !important;
+}
+.alta-ab-s11__because {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 16px !important; display: block !important;
+}
+.alta-ab-s11__how { margin-bottom: 24px !important; display: block !important; }
+.alta-ab-s11__how p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s11__closing { display: block !important; }
+.alta-ab-s11__closing p {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.7 !important; color: #8A8A8A !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s11__closing p:first-child { font-weight: 400 !important; color: #B8B8B8 !important; margin-bottom: 4px !important; }
+@media (max-width: 768px) { .alta-ab-s11 { padding: 120px 24px !important; } }
+
+/* ============================================================
+   S12 — WELCOME / PLAY THE LONG GAME
+   ============================================================ */
+.alta-ab-s12, .alta-ab-s12 *, .alta-ab-s12 *::before, .alta-ab-s12 *::after {
+  box-sizing: border-box !important; margin: 0 !important; padding: 0 !important;
+}
+.alta-ab-s12 {
+  background-color: #000000 !important; width: 100% !important;
+  padding: 160px 24px !important; position: relative !important;
+  font-family: 'Lato', sans-serif !important;
+}
+.alta-ab-s12::before {
+  content: '' !important; display: block !important; width: 100% !important;
+  max-width: 760px !important; height: 1px !important;
+  background-color: #1F1F1F !important; position: absolute !important;
+  top: 0 !important; left: 50% !important; transform: translateX(-50%) !important;
+}
+.alta-ab-s12__inner { max-width: 760px !important; margin: 0 auto !important; padding: 0 !important; }
+.alta-ab-s12__condition {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 56px !important; display: block !important;
+}
+.alta-ab-s12__condition strong { font-weight: 700 !important; color: #EDEDED !important; }
+.alta-ab-s12__divider {
+  width: 40px !important; height: 1px !important; background-color: #C8B568 !important;
+  margin-bottom: 56px !important; display: block !important; border: none !important;
+}
+.alta-ab-s12__moment { margin-bottom: 64px !important; display: block !important; }
+.alta-ab-s12__moment p {
+  font-family: 'Lato', sans-serif !important; font-weight: 700 !important;
+  font-size: 18px !important; line-height: 1.7 !important;
+  letter-spacing: 0.02em !important; color: #EDEDED !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+.alta-ab-s12__welcome {
+  font-family: 'Lato', sans-serif !important; font-weight: 300 !important;
+  font-size: 18px !important; line-height: 1.8 !important; color: #B8B8B8 !important;
+  margin-bottom: 80px !important; display: block !important;
+}
+.alta-ab-s12__tagline {
+  font-family: 'Poppins', sans-serif !important; font-weight: 300 !important;
+  font-size: clamp(28px, 4vw, 44px) !important; line-height: 1.1 !important;
+  letter-spacing: 0.01em !important; color: #EDEDED !important; display: block !important;
+}
+@media (max-width: 768px) {
+  .alta-ab-s12 { padding: 140px 24px 120px !important; }
+}
+
+@media (max-width: 600px) {
+  .alta-nav { padding: 0 20px; }
+  .alta-nav__links { display: none; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="alta-nav">
+  <a class="alta-nav__logo" href="#">Alta Male Lab</a>
+  <ul class="alta-nav__links">
+    <li><a href="#">Manifesto</a></li>
+    <li><a href="#">Journal</a></li>
+    <li><a href="#">Framework</a></li>
+    <li><a href="#">Academy</a></li>
+    <li><a href="#" class="active">About</a></li>
+  </ul>
+  <div class="alta-nav__lang">
+    <a href="#" class="active">EN</a>
+    <span>/</span>
+    <a href="#">FR</a>
+    <span>/</span>
+    <a href="#">DE</a>
+  </div>
+</nav>
+
+<!-- PAGE -->
+<div class="alta-page">
+
+  <!-- S01 — HERO -->
+  <section class="alta-ab-s01">
+    <div class="alta-ab-s01__inner">
+      <span class="alta-ab-s01__eyebrow">Alta Male Lab — About</span>
+      <h1 class="alta-ab-s01__title">The Long Game<br>for Men 40+</h1>
+      <div class="alta-ab-s01__divider"></div>
+      <p class="alta-ab-s01__lead">It's not about living longer.<br>It's about remaining capable as you move forward.</p>
+      <p class="alta-ab-s01__body">Most men begin paying serious attention to their health when something starts to give.</p>
+      <div class="alta-ab-s01__lines">
+        <p>Energy declines.</p>
+        <p>Recovery slows.</p>
+        <p>Strength fades.</p>
+        <p>Clarity becomes harder to sustain.</p>
+      </div>
+      <p class="alta-ab-s01__pivot">For many, this moment comes around forty.</p>
+      <p class="alta-ab-s01__question">
+        But what if this moment wasn't the beginning of decline?<br><br>
+        What if it marked, instead,<br>
+        the beginning of <em>the Long Game</em>?
+      </p>
+    </div>
+  </section>
+
+  <!-- S02 — THE LONG GAME -->
+  <section class="alta-ab-s02">
+    <div class="alta-ab-s02__inner">
+      <h2 class="alta-ab-s02__title">The Long Game</h2>
+      <p class="alta-ab-s02__body">The <strong>Long Game</strong> is the idea that the second half of a man's life can be played differently.</p>
+      <div class="alta-ab-s02__negatives">
+        <p>Not through urgency.</p>
+        <p>Not through shortcuts.</p>
+        <p>Not through extreme optimization.</p>
+      </div>
+      <p class="alta-ab-s02__pivot">But through strategy.</p>
+      <div class="alta-ab-s02__positives">
+        <p>Through strength.</p>
+        <p>Through metabolic stability.</p>
+        <p>Through nervous system regulation.</p>
+        <p>Through a deeper understanding of how the body evolves over time.</p>
+      </div>
+      <p class="alta-ab-s02__body">Longevity isn't just about living longer.</p>
+      <p class="alta-ab-s02__statement">It's about remaining <strong>physically capable, mentally clear, and emotionally stable</strong> across decades.</p>
+    </div>
+  </section>
+
+  <!-- S03 — CORE PRINCIPLE -->
+  <section class="alta-ab-s03">
+    <div class="alta-ab-s03__inner">
+      <span class="alta-ab-s03__label">— Core Principle —</span>
+      <span class="alta-ab-s03__word">Energy.</span>
+      <span class="alta-ab-s03__word">Structure.</span>
+      <span class="alta-ab-s03__word">Regulation.</span>
+    </div>
+  </section>
+
+  <!-- S04 — WHAT ALTA MALE LAB IS -->
+  <section class="alta-ab-s04">
+    <div class="alta-ab-s04__inner">
+      <h2 class="alta-ab-s04__title">What Alta Male Lab Is</h2>
+      <p class="alta-ab-s04__definition">Alta Male Lab is a <strong>longevity journal for men 40+</strong>.</p>
+      <p class="alta-ab-s04__body">A space where health, strength, aging, and masculinity are explored with clarity, rigor, and grounding in reality.</p>
+      <p class="alta-ab-s04__intersect-label">The project sits at the intersection of:</p>
+      <ul class="alta-ab-s04__list">
+        <li>metabolic health</li>
+        <li>strength and muscle as a longevity organ</li>
+        <li>nervous system regulation and recovery</li>
+        <li>long-term lifestyle hygiene</li>
+        <li>conscious masculinity in the second half of life</li>
+      </ul>
+      <p class="alta-ab-s04__not">This isn't an optimization blog.</p>
+      <p class="alta-ab-s04__closing">It's a journal dedicated to <strong>the art of playing the Long Game with your body, your mind, and your life.</strong></p>
+    </div>
+  </section>
+
+  <!-- S05 — WHO IS THE ALTA MALE -->
+  <section class="alta-ab-s05">
+    <div class="alta-ab-s05__inner">
+      <span class="alta-ab-s05__label">— The Alta Male —</span>
+      <h2 class="alta-ab-s05__title">Who Is the Alta Male</h2>
+      <div class="alta-ab-s05__not-lines">
+        <p>The <strong>Alta Male</strong> isn't a category.</p>
+        <p>Not a status.</p>
+        <p>Not a label.</p>
+      </div>
+      <p class="alta-ab-s05__trajectory">It's a <strong>trajectory</strong>.</p>
+      <div class="alta-ab-s05__actions">
+        <p>He no longer needs to prove.</p>
+        <p>He builds.</p>
+        <p>He stabilizes.</p>
+        <p>He plays long.</p>
+      </div>
+      <p class="alta-ab-s05__body">He's no longer driven by noise, comparison, or external validation.</p>
+      <p class="alta-ab-s05__body">He builds something more durable.</p>
+      <p class="alta-ab-s05__body">He understands that after 40, the rules change.</p>
+      <div class="alta-ab-s05__rules">
+        <p>Strength is no longer optional.</p>
+        <p>Energy is no longer infinite.</p>
+        <p>Recovery is no longer automatic.</p>
+      </div>
+      <p class="alta-ab-s05__adapts">So he adapts.</p>
+      <div class="alta-ab-s05__habits">
+        <p>He trains to function, not to impress.</p>
+        <p>He thinks in decades, not weeks.</p>
+        <p>He prioritizes stability over intensity.</p>
+      </div>
+      <div class="alta-ab-s05__pairs">
+        <p>He doesn't reject strength.</p>
+        <p>He refines it.</p>
+        <p>He doesn't seek to dominate.</p>
+        <p>He develops capacity.</p>
+      </div>
+      <div class="alta-ab-s05__divider"></div>
+      <div class="alta-ab-s05__closing-strong">
+        <p>Physically responsible.</p>
+        <p>Mentally clear.</p>
+        <p>Emotionally grounded.</p>
+      </div>
+      <div class="alta-ab-s05__final">
+        <p>He plays a different game.</p>
+        <p>Not louder.</p>
+        <p>Not faster.</p>
+      </div>
+      <p class="alta-ab-s05__longer">But longer.</p>
+    </div>
+  </section>
+
+  <!-- S06 — THE MEANING OF ALTA -->
+  <section class="alta-ab-s06">
+    <div class="alta-ab-s06__inner">
+      <span class="alta-ab-s06__label">— The Meaning of "Alta" —</span>
+      <p class="alta-ab-s06__opening">Alta means <strong>higher</strong>.</p>
+      <div class="alta-ab-s06__not-lines">
+        <p>Not higher than others.</p>
+        <p>Not higher in status.</p>
+      </div>
+      <div class="alta-ab-s06__divider"></div>
+      <div class="alta-ab-s06__higher-lines">
+        <p>Higher in standards.</p>
+        <p>Higher in awareness.</p>
+        <p>Higher in alignment.</p>
+      </div>
+      <p class="alta-ab-s06__closing">To be Alta is to move beyond reactive masculinity<br>and into an integrated, stable, conscious strength.</p>
+    </div>
+  </section>
+
+  <!-- S07 — ABOUT ANTHONY -->
+  <section class="alta-ab-s07">
+    <div class="alta-ab-s07__inner">
+      <div class="alta-ab-s07__header">
+        <div class="alta-ab-s07__portrait-wrap">
+          <!-- Portrait base64 ~3,77 MB intégré dans about-s07-about-anthony-divi.html -->
+          <!-- Placeholder visuel uniquement pour la page de rendu final -->
+          <div style="width:220px;height:274px;background:#0D0D0D;border:1px solid #1F1F1F;display:flex;align-items:center;justify-content:center;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2A2A2A" stroke-width="1.2">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="alta-ab-s07__intro">
+          <h2 class="alta-ab-s07__title">About Anthony</h2>
+          <span class="alta-ab-s07__credential">Founder · Alta Male Lab</span>
+          <p class="alta-ab-s07__lead">I am Anthony JR Kvaternik.</p>
+        </div>
+      </div>
+      <p class="alta-ab-s07__body">For many years, I believed health was mostly about discipline.</p>
+      <p class="alta-ab-s07__body">Train harder. Eat better. Stay consistent.</p>
+      <p class="alta-ab-s07__body">Like many men, I learned to push through fatigue, override discomfort, and postpone listening to my body for another day.</p>
+      <p class="alta-ab-s07__body">Not out of neglect.</p>
+      <p class="alta-ab-s07__body">Simply because life happened.</p>
+      <p class="alta-ab-s07__body">Responsibilities. Work. Family. The quiet habit of putting everything else first.</p>
+      <p class="alta-ab-s07__body">Looking back, I can name that period with one word:</p>
+      <p class="alta-ab-s07__word">disconnection.</p>
+      <p class="alta-ab-s07__body">And I don't believe I'm alone.</p>
+      <p class="alta-ab-s07__body">Many men don't lose their health all at once.<br>They lose the relationship with themselves first.</p>
+      <p class="alta-ab-s07__body">One day, something became impossible to ignore.</p>
+      <p class="alta-ab-s07__body">Not a dramatic diagnosis. Not a crisis.</p>
+      <p class="alta-ab-s07__body">A quiet realization:</p>
+      <p class="alta-ab-s07__body">I was no longer listening to the signals of my own biology.</p>
+      <p class="alta-ab-s07__body">That moment didn't become a source of fear.</p>
+      <p class="alta-ab-s07__body">It became an invitation.</p>
+      <div class="alta-ab-s07__lines">
+        <p>An invitation to reconnect.</p>
+        <p>To understand rather than override.</p>
+        <p>To work with my body instead of against it.</p>
+      </div>
+      <p class="alta-ab-s07__body">Training, strength development and a deeper understanding of physiology transformed my physical condition.</p>
+      <p class="alta-ab-s07__body">But the greatest transformation wasn't visible.</p>
+      <div class="alta-ab-s07__lines">
+        <p>It was stability.</p>
+        <p>Clarity.</p>
+        <p>A different relationship with my own body.</p>
+      </div>
+      <p class="alta-ab-s07__body">And, ultimately, a different relationship with myself.</p>
+      <p class="alta-ab-s07__body">There is also Mila, my daughter.</p>
+      <div class="alta-ab-s07__lines">
+        <p>Not as an emotional argument.</p>
+        <p>But as a daily reminder that the best lessons are rarely taught through words.</p>
+      </div>
+      <p class="alta-ab-s07__body">They are lived.</p>
+      <p class="alta-ab-s07__body">Certified as a Personal Trainer at the University of Lausanne (SSU/UNIL), I continued exploring metabolic health, strength, nervous system regulation and long-term human resilience.</p>
+      <p class="alta-ab-s07__body">Alta Male Lab emerged from that journey.</p>
+      <div class="alta-ab-s07__lines">
+        <p>Not as a coaching platform.</p>
+        <p>Not as another optimization project.</p>
+      </div>
+      <p class="alta-ab-s07__body">But as a place to explore a simple conviction:</p>
+      <div class="alta-ab-s07__divider"></div>
+      <p class="alta-ab-s07__conviction"><strong>Your body is not betraying you. It is informing you.</strong></p>
+      <p class="alta-ab-s07__body">And perhaps the Long Game is not only about living longer.</p>
+      <p class="alta-ab-s07__body">Perhaps it is about learning, little by little, to stop fighting yourself.</p>
+      <div class="alta-ab-s07__lines">
+        <p>To learn the language of your biology.</p>
+      </div>
+      <div class="alta-ab-s07__closing">And, eventually,<br>to come home to yourself.</div>
+    </div>
+  </section>
+
+  <!-- S08 — THE ALTA FRAMEWORK -->
+  <section class="alta-ab-s08">
+    <div class="alta-ab-s08__inner">
+      <h2 class="alta-ab-s08__title">— The Alta Framework —</h2>
+      <p class="alta-ab-s08__intro">After 40, longevity isn't random.</p>
+      <p class="alta-ab-s08__logic">It follows a logic.</p>
+      <div class="alta-ab-s08__three-words">
+        <p>Energy.</p>
+        <p>Structure.</p>
+        <p>Regulation.</p>
+      </div>
+      <p class="alta-ab-s08__pillars-intro">The Alta Framework is built on three biological systems:</p>
+      <div class="alta-ab-s08__pillar">
+        <span class="alta-ab-s08__pillar-name">Metabolic Intelligence</span>
+        <p class="alta-ab-s08__pillar-desc">The body's ability to produce, use, and stabilize energy.</p>
+      </div>
+      <div class="alta-ab-s08__pillar">
+        <span class="alta-ab-s08__pillar-name">Strength &amp; Muscles</span>
+        <p class="alta-ab-s08__pillar-desc">The structural base that protects metabolism, movement, and autonomy.</p>
+      </div>
+      <div class="alta-ab-s08__pillar">
+        <span class="alta-ab-s08__pillar-name">Mind &amp; Nervous System</span>
+        <p class="alta-ab-s08__pillar-desc">The system that regulates stress, recovery, and long-term resilience.</p>
+      </div>
+      <div class="alta-ab-s08__closing">
+        <p>When these systems align, the trajectory shifts.</p>
+        <p><strong>Energy stabilizes.</strong><br><strong>The body becomes resilient.</strong><br><strong>Longevity becomes a strategy.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S09 — A DIFFERENT VISION OF MASCULINITY -->
+  <section class="alta-ab-s09">
+    <div class="alta-ab-s09__inner">
+      <h2 class="alta-ab-s09__title">A Different Vision of Masculinity</h2>
+      <p class="alta-ab-s09__body">Alta Male Lab doesn't promote outdated models of masculinity.</p>
+      <p class="alta-ab-s09__body">But it doesn't reject strength either.</p>
+      <p class="alta-ab-s09__body">It explores a more integrated and mature form.</p>
+      <div class="alta-ab-s09__triple">
+        <p>Strength without arrogance.</p>
+        <p>Discipline without rigidity.</p>
+        <p>Confidence without domination.</p>
+      </div>
+      <p class="alta-ab-s09__body">Because aging well isn't only biological.</p>
+      <p class="alta-ab-s09__body">It's also psychological.</p>
+      <div class="alta-ab-s09__levels">
+        <p>And ultimately, existential.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S10 — A JOURNAL FOR THE SECOND HALF OF LIFE -->
+  <section class="alta-ab-s10">
+    <div class="alta-ab-s10__inner">
+      <h2 class="alta-ab-s10__title">A Journal for the Second Half of Life</h2>
+      <p class="alta-ab-s10__intro">Most health content is built for youth, performance, or rapid transformation.</p>
+      <p class="alta-ab-s10__focus">Alta Male Lab focuses on something else:<br><strong>the second half of a man's life.</strong></p>
+      <div class="alta-ab-s10__years">
+        <p>The years where strength must be maintained, not assumed.</p>
+        <p>Where energy must be managed, not taken for granted.</p>
+        <p>Where clarity becomes more valuable than intensity.</p>
+      </div>
+      <p class="alta-ab-s10__closing">The <strong>Long Game</strong> is learning to navigate these years with intelligence.</p>
+    </div>
+  </section>
+
+  <!-- S11 — ALTA & MEN'S HEALTH -->
+  <section class="alta-ab-s11">
+    <div class="alta-ab-s11__inner">
+      <h2 class="alta-ab-s11__title">ALTA &amp; Men's Health</h2>
+      <p class="alta-ab-s11__intro">Alta Male Lab was never meant to be only a journal.</p>
+      <p class="alta-ab-s11__conviction">Behind it lies a deeper conviction:<br><strong>Men's health is not just a personal matter. It's a shared responsibility.</strong></p>
+      <div class="alta-ab-s11__block">
+        <span class="alta-ab-s11__cause-name">Movember</span>
+        <p class="alta-ab-s11__cause-body">Every November, I take part in Movember.</p>
+        <p class="alta-ab-s11__cause-body">Not as a brand activation. But as a personal commitment to a cause that matters.</p>
+        <div class="alta-ab-s11__issues">
+          <p>Prostate cancer. Testicular cancer. Mental health and suicide prevention.</p>
+        </div>
+        <p class="alta-ab-s11__transition">Issues that deserve greater awareness, research, and support.</p>
+        <p class="alta-ab-s11__invite">Through the Alta Male Lab Movember Team, I invite others to contribute to that effort.</p>
+        <a class="alta-ab-s11__cta" href="https://ch.movember.com/en/team/2390931" target="_blank" rel="noopener">Join or support the ALTA team →</a>
+      </div>
+      <div class="alta-ab-s11__rule"></div>
+      <div class="alta-ab-s11__block">
+        <span class="alta-ab-s11__cause-name">männer.ch</span>
+        <p class="alta-ab-s11__cause-body">I am also a personal supporting member of männer.ch, the Swiss umbrella association for progressive men's and fathers' organizations.</p>
+        <p class="alta-ab-s11__because">Because a more conscious masculinity isn't built in isolation.</p>
+        <div class="alta-ab-s11__how">
+          <p>It grows through dialogue, connection, and shared responsibility.</p>
+        </div>
+        <a class="alta-ab-s11__cta" href="https://www.maenner.ch/" target="_blank" rel="noopener">Discover männer.ch →</a>
+      </div>
+      <div class="alta-ab-s11__rule"></div>
+      <div class="alta-ab-s11__closing">
+        <p>Taking care of yourself is where it starts.</p>
+        <p>Showing up for others is where it goes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S12 — WELCOME / PLAY THE LONG GAME -->
+  <section class="alta-ab-s12">
+    <div class="alta-ab-s12__inner">
+      <p class="alta-ab-s12__condition">If you believe aging can be a process of <strong>mastery rather than decline</strong>, you're in the right place.</p>
+      <div class="alta-ab-s12__divider"></div>
+      <div class="alta-ab-s12__moment">
+        <p>This moment isn't the end.</p>
+        <p>It's a starting point.</p>
+      </div>
+      <p class="alta-ab-s12__welcome">Welcome to Alta Male Lab.</p>
+      <span class="alta-ab-s12__tagline">Play the Long Game.</span>
+    </div>
+  </section>
+
+</div><!-- /alta-page -->
+
+</body>
+</html>
