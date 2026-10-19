@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-@font-face{font-family:'Gaoel';src:url('https://altamalelab.github.io/hp-reference/assets/gaoel.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Gaoel';src:url('assets/gaoel.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 :root{
   --bg:#000000; --bg-2:#0A0A0A; --line:#1F1F1F; --line-2:#2A2A2A;
   --fg-1:#EDEDED; --fg-2:#B8B8B8; --fg-3:#8A8A8A; --fg-4:#5A5A5A; --gold:#C8B568;
@@ -82,7 +82,7 @@ strong{color:var(--fg-1);font-weight:700}
 .sec__title{font-family:'Poppins',sans-serif;font-weight:500;color:var(--fg-1);font-size:clamp(1.3rem,2.4vw,1.7rem);line-height:1.25;margin:0 0 8px}
 .sec__file{font-size:14px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .tag{font-family:'Poppins',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-3);border:1px solid var(--line-2);padding:4px 8px;line-height:1}
-.tag--note{color:var(--gold);border-color:#4a4426}
+.tag--live{color:var(--gold);border-color:#4a4426}
 .frame{margin:0 0 32px}
 .frame__label{font-family:'Poppins',sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-3);margin-bottom:10px}
 .frame__box{position:relative;overflow:hidden;border:1px solid var(--line-2);background:#000}
@@ -125,7 +125,7 @@ strong{color:var(--fg-1);font-weight:700}
   <div class="wrap">
     <span class="eyebrow">Référence d'intégration</span>
     <h1>Page About ALTA MALE LAB — rendu attendu et méthode Divi.</h1>
-    <p class="lede">Cette page montre les 12 sections de la page About telles qu'elles doivent apparaître sur le site, en desktop et en mobile. Chaque aperçu est produit par le code exact à intégrer : ce que tu vois ici, c'est ce que le fichier donne une fois collé.</p>
+    <p class="lede">Cette page montre les 12 sections de la page About telles qu'elles doivent apparaître sur le site, en desktop et en mobile. Chaque aperçu est produit par le fichier exact à intégrer : ce que tu vois ici, c'est ce que le fichier donne une fois collé.</p>
     <p>Elle utilise la même méthode que la <a href="https://altamalelab.github.io/hp-reference/">page Homepage</a>. Le rendu immersif complet est disponible ici : <a href="apercu/">aperçu About EN →</a></p>
   </div>
 </section>
@@ -135,10 +135,10 @@ strong{color:var(--fg-1);font-weight:700}
     <span class="eyebrow">01 — La règle</span>
     <h2>Un fichier = un module Code.</h2>
     <div class="rule">
-      <p class="rule__h">Chaque section de la page About = un seul module Code Divi, dans lequel on colle le HTML/CSS correspondant, tel quel.</p>
+      <p class="rule__h">Chaque section de la page About = un seul module Code Divi, dans lequel on colle le fichier HTML/CSS correspondant, tel quel.</p>
       <p><span class="no">Aucun</span> module Texte, Titre, Bouton, Image ou Séparateur. <span class="no">Aucun</span> réglage de style Divi (police, taille, couleur, espacement, responsive). <span class="no">Aucun</span> texte retapé.</p>
     </div>
-    <p>Tout le design (textes, césures, graisses, couleurs, espacements, version mobile) est déjà dans le code. Divi sert uniquement de structure : une section, une ligne, une colonne, un module Code.</p>
+    <p>Tout le design (textes, césures, graisses, couleurs, espacements, version mobile) est déjà dans le fichier. Divi sert uniquement de structure : une section, une ligne, une colonne, un module Code.</p>
     <p>Le préfixe de classes CSS est <code>alta-ab-sXX-</code> pour toutes les sections About, évitant tout conflit avec la Homepage.</p>
   </div>
 </section>
@@ -148,21 +148,21 @@ strong{color:var(--fg-1);font-weight:700}
     <span class="eyebrow">02 — Réglages Divi</span>
     <h2>Préparer chaque section.</h2>
     <table class="tbl">
-      <tr><th>Section</th><td>Couleur de fond <code>#000000</code>. Marges intérieures haut et bas : <code>0px</code> (chaque section gère ses espacements).</td></tr>
-      <tr><th>Ligne (Row)</th><td>Largeur <code>100%</code>, largeur max <code>100%</code>, marges intérieures <code>0px</code>, gouttière <code>1</code>. Le code centre lui-même son contenu sur 760 px.</td></tr>
+      <tr><th>Section</th><td>Couleur de fond <code>#000000</code>. Marges intérieures haut et bas : <code>0px</code> (chaque fichier gère ses espacements).</td></tr>
+      <tr><th>Ligne (Row)</th><td>Largeur <code>100%</code>, largeur max <code>100%</code>, marges intérieures <code>0px</code>, gouttière <code>1</code>. Le fichier centre lui-même son contenu sur 760 px.</td></tr>
       <tr><th>Colonne</th><td>Une seule colonne par section, marges intérieures <code>0px</code>. (S07 gère son propre layout 2 colonnes en CSS interne.)</td></tr>
-      <tr><th>Module</th><td>Un seul module <strong>Code</strong>, marges <code>0px</code>. Coller le code complet tel quel.</td></tr>
-      <tr><th>Footer</th><td>Désactiver le footer global sur la page About : Page Settings → Divi → Footer → None. La section S12 est la clôture éditoriale — rien après.</td></tr>
-      <tr><th>En-tête</th><td>Utiliser la navigation ALTA globale déjà en place (même que la Homepage). Marquer le lien « ABOUT » comme actif.</td></tr>
-      <tr><th>Police Gaoel</th><td>Déjà intégrée en base64 dans la navigation globale. Ne pas modifier.</td></tr>
-      <tr><th>Portrait S07</th><td>Photo intégrée en base64 directement dans le code. Ne pas remplacer par un lien image Divi.</td></tr>
+      <tr><th>Module</th><td>Un seul module <strong>Code</strong>, marges <code>0px</code>. Coller le fichier complet tel quel.</td></tr>
+      <tr><th>Footer global</th><td>Désactiver le footer WordPress standard sur la page About : Page Settings → Divi → Footer → None. La section S12 est la clôture éditoriale — rien après.</td></tr>
+      <tr><th>En-tête</th><td>Utiliser la navigation ALTA globale déjà en place (même que la Homepage). Marquer le lien « ABOUT » comme actif (<code>alta-nav__link--active</code>).</td></tr>
+      <tr><th>Police Gaoel</th><td>Gaoel sert uniquement au logo. Elle est déjà intégrée dans l'en-tête global (S00 de la Homepage) : rien à réinstaller. Jamais Gaoel pour les titres ou le texte.</td></tr>
+      <tr><th>Portrait S07</th><td>Photo intégrée en base64 directement dans le fichier. Ne pas remplacer par un lien image Divi — le fichier se suffit à lui-même.</td></tr>
     </table>
     <h4>Coller sans abîmer le code</h4>
     <ol class="steps">
-      <li>Prendre le code depuis cette page (bouton « Copier le code » ou « Télécharger le fichier »). Jamais depuis un email ou un document Word : les guillemets seraient modifiés.</li>
+      <li>Prendre le fichier depuis cette page (bouton « Copier le code » ou « Télécharger le fichier »). Jamais depuis un email ou un document Word : les guillemets seraient modifiés.</li>
       <li>Coller dans l'onglet de contenu du module Code, sans rien ajouter ni retirer.</li>
       <li>Garder les liens provisoires <code>#journal</code>, <code>#framework</code>, <code>#manifesto</code>, <code>#academy</code> tels quels. Ils seront remplacés quand les pages existeront.</li>
-      <li>Enregistrer, puis vider les caches : Delete Cache (barre WordPress, WP Super Cache), cache CSS de Divi, et Cloudflare si besoin.</li>
+      <li>Enregistrer, puis vider les caches : <strong>Delete Cache</strong> (barre WordPress, WP Super Cache), cache CSS de Divi, et Cloudflare si besoin.</li>
       <li>Comparer la section avec son aperçu ci-dessous, en desktop puis en mobile.</li>
     </ol>
     <h4>Si quelque chose ne s'affiche pas comme ici</h4>
@@ -179,7 +179,8 @@ strong{color:var(--fg-1);font-weight:700}
       <div class="sw"><div class="sw__c" style="background:#000000"></div><div class="sw__t"><b>#000000</b>Fond de toutes les sections</div></div>
       <div class="sw"><div class="sw__c" style="background:#0A0A0A"></div><div class="sw__t"><b>#0A0A0A</b>Fond alternatif (footer)</div></div>
       <div class="sw"><div class="sw__c" style="background:#1F1F1F"></div><div class="sw__t"><b>#1F1F1F</b>Traits fins, séparateurs</div></div>
-      <div class="sw"><div class="sw__c" style="background:#C8B568"></div><div class="sw__t"><b>#C8B568</b>Or : numéros, accents, CTA</div></div>
+      <div class="sw"><div class="sw__c" style="background:#2A2A2A"></div><div class="sw__t"><b>#2A2A2A</b>Bordures secondaires</div></div>
+      <div class="sw"><div class="sw__c" style="background:#C8B568"></div><div class="sw__t"><b>#C8B568</b>Or : accents, CTA, numéros</div></div>
       <div class="sw"><div class="sw__c" style="background:#EDEDED"></div><div class="sw__t"><b>#EDEDED</b>Texte principal</div></div>
       <div class="sw"><div class="sw__c" style="background:#B8B8B8"></div><div class="sw__t"><b>#B8B8B8</b>Texte secondaire</div></div>
       <div class="sw"><div class="sw__c" style="background:#8A8A8A"></div><div class="sw__t"><b>#8A8A8A</b>Texte discret, clôture</div></div>
@@ -190,9 +191,9 @@ strong{color:var(--fg-1);font-weight:700}
     <div class="type-row"><div class="k">Police du logo</div><div>Gaoel, uniquement pour le logo (wordmark). Jamais pour les titres ni pour le texte.</div></div>
     <div class="type-row"><div class="k">Labels</div><div style="font-family:'Poppins',sans-serif;font-weight:500;color:var(--fg-2);font-size:12px;letter-spacing:.28em;text-transform:uppercase">Poppins 500 · majuscules espacées</div></div>
     <div class="type-row"><div class="k">Mise en page</div><div>Contenu centré sur 760 px maximum · 120 px en haut et en bas de chaque section · aucune ombre, animation ou effet décoratif.</div></div>
-    <div class="type-row"><div class="k">Entre sections</div><div>Le fond reste noir partout. Chaque section commence par un trait fin #1F1F1F, centré sur 760 px. Déjà dans chaque fichier — aucun module Séparateur Divi.</div></div>
+    <div class="type-row"><div class="k">Entre sections</div><div>Le fond reste noir partout. Chaque section (S02 à S12) commence par un trait fin #1F1F1F, centré sur 760 px. Déjà dans chaque fichier — aucun module Séparateur Divi.</div></div>
     <div class="type-row"><div class="k">Termes fixes</div><div>Toujours en anglais, jamais traduits : The Long Game · Alta Male Lab · Alta Framework · Metabolic Intelligence · Strength &amp; Muscles · Mind &amp; Nervous System.</div></div>
-    <div class="type-row"><div class="k">Typographie</div><div>Espace insécable <code>&amp;nbsp;</code> avant <code>?</code> dans la S01 — typographie française/suisse. Déjà dans le code.</div></div>
+    <div class="type-row"><div class="k">Polices</div><div>Chaque fichier charge Poppins et Lato. Si elles sont déjà chargées dans le thème, la ligne <code>@import</code> peut être retirée de chaque fichier (voir README).</div></div>
   </div>
 </section>
 
@@ -201,20 +202,7 @@ strong{color:var(--fg-1);font-weight:700}
     <span class="eyebrow">04 — Les 12 sections</span>
     <h2>Rendu attendu, section par section.</h2>
     <p>En desktop, l'aperçu est la largeur réelle de 1440 px réduite pour tenir dans la page. En mobile, il est à taille réelle (390 px).</p>
-    <ul class="toc">
-      <li><a href="#s01"><span>S01</span>Who Writes This</a></li>
-      <li><a href="#s02"><span>S02</span>Not a Blog</a></li>
-      <li><a href="#s03"><span>S03</span>The Long Game</a></li>
-      <li><a href="#s04"><span>S04</span>The Alta Framework</a></li>
-      <li><a href="#s05"><span>S05</span>For Men 40+</a></li>
-      <li><a href="#s06"><span>S06</span>Not a Coach</a></li>
-      <li><a href="#s07"><span>S07</span>The Founder</a></li>
-      <li><a href="#s08"><span>S08</span>The Manifesto</a></li>
-      <li><a href="#s09"><span>S09</span>What You Find Here</a></li>
-      <li><a href="#s10"><span>S10</span>The Alta Circle</a></li>
-      <li><a href="#s11"><span>S11</span>Alta Body &amp; Mind Academy</a></li>
-      <li><a href="#s12"><span>S12</span>Closing — The Long Game</a></li>
-    </ul>
+    <ul class="toc"><li><a href="#s01"><span>S01</span>Who Writes This</a></li><li><a href="#s02"><span>S02</span>Not a Blog</a></li><li><a href="#s03"><span>S03</span>The Long Game</a></li><li><a href="#s04"><span>S04</span>The Alta Framework</a></li><li><a href="#s05"><span>S05</span>For Men 40+</a></li><li><a href="#s06"><span>S06</span>Not a Coach</a></li><li><a href="#s07"><span>S07</span>The Founder</a></li><li><a href="#s08"><span>S08</span>The Manifesto</a></li><li><a href="#s09"><span>S09</span>What You Find Here</a></li><li><a href="#s10"><span>S10</span>The Alta Circle</a></li><li><a href="#s11"><span>S11</span>Alta Body &amp; Mind Academy</a></li><li><a href="#s12"><span>S12</span>Closing — The Long Game</a></li></ul>
   </div>
 </section>
 
@@ -239,16 +227,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Introduction éditoriale en voix du fondateur. Texte en Lato 300.</li>
-        <li>Question d'ouverture avec espace insécable avant le <code>?</code> — typographie française/suisse. Déjà dans le code.</li>
-        <li>Première section — aucun séparateur au-dessus.</li>
-      </ul>
+      <ul class="side__list"><li>Introduction éditoriale en voix du fondateur. Titre H1 Poppins 600, corps Lato 300.</li><li>Question d'ouverture avec espace insécable avant le <code>?</code> — typographie française/suisse. Déjà dans le code.</li><li>Première section — aucun séparateur au-dessus.</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="apercu/index.html" data-section="s01">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s01.html" download="about-s01-who-writes-this.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s01-who-writes-this.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s01-who-writes-this.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier téléchargé contient le HTML/CSS complet de la section. Colle-le tel quel dans un module Code Divi.</p>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -272,15 +256,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Positionnement éditorial — ce que Alta Male Lab n'est pas.</li>
-        <li>Trait séparateur fin #1F1F1F en haut de section, centré sur 760 px.</li>
-      </ul>
+      <ul class="side__list"><li>Positionnement éditorial — ce que Alta Male Lab n'est pas. Liste Lato 400.</li><li>Trait séparateur fin <code>#1F1F1F</code> en haut de section, centré sur 760 px.</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="preview/s02.html">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s02.html" download="about-s02-not-a-blog.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s02-not-a-blog.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s02-not-a-blog.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier téléchargé contient le HTML/CSS complet de la section. Colle-le tel quel dans un module Code Divi.</p>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -304,15 +285,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Définition de la philosophie centrale. Accent gold <code>#C8B568</code> sur "The Long Game".</li>
-        <li>Corps Lato 300, lecture sobre.</li>
-      </ul>
+      <ul class="side__list"><li>Définition de la philosophie centrale. Accent gold <code>#C8B568</code> sur "The Long Game".</li><li>Corps Lato 300, lecture sobre et immersive.</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="preview/s03.html">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s03.html" download="about-s03-the-long-game.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s03-the-long-game.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s03-the-long-game.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier téléchargé contient le HTML/CSS complet de la section. Colle-le tel quel dans un module Code Divi.</p>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -336,15 +314,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Les 3 piliers : Metabolic Intelligence · Strength &amp; Muscles · Mind &amp; Nervous System. Toujours en anglais, jamais traduits.</li>
-        <li>Numéros en gold, blocs verticaux.</li>
-      </ul>
+      <ul class="side__list"><li>Les 3 piliers biologiques — toujours en anglais, jamais traduits : Metabolic Intelligence · Strength &amp; Muscles · Mind &amp; Nervous System.</li><li>Numéros en gold <code>#C8B568</code>, blocs verticaux empilés. Trait séparateur entre chaque pilier.</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="preview/s04.html">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s04.html" download="about-s04-the-alta-framework.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s04-the-alta-framework.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s04-the-alta-framework.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier téléchargé contient le HTML/CSS complet de la section. Colle-le tel quel dans un module Code Divi.</p>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -368,15 +343,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Définition de l'audience. Ton direct, sobre.</li>
-        <li>Titre H2 Poppins 500, corps Lato 300.</li>
-      </ul>
+      <ul class="side__list"><li>Définition de l'audience. Ton direct, sobre, sans condescendance.</li><li>Titre H2 Poppins 500, corps Lato 300.</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="preview/s05.html">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s05.html" download="about-s05-for-men-40.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s05-for-men-40.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s05-for-men-40.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier téléchargé contient le HTML/CSS complet de la section. Colle-le tel quel dans un module Code Divi.</p>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -400,15 +372,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Différenciation — ce que le fondateur n'est pas. Ton affirmé.</li>
-        <li>Pas de coach, pas de programme de 90 jours.</li>
-      </ul>
+      <ul class="side__list"><li>Différenciation — ce que le fondateur n'est pas. Ton affirmé et sobre.</li><li>Pas de coach, pas de programme de 90 jours. Titre H2 Poppins 500.</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="preview/s06.html">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s06.html" download="about-s06-not-a-coach.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s06-not-a-coach.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s06-not-a-coach.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier téléchargé contient le HTML/CSS complet de la section. Colle-le tel quel dans un module Code Divi.</p>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -418,7 +387,7 @@ strong{color:var(--fg-1);font-weight:700}
     <div class="sec__num">S07</div>
     <div>
       <h3 class="sec__title">The Founder</h3>
-      <div class="sec__file"><code>about-s07-the-founder.html</code> <span class="tag tag--note">Portrait base64</span></div>
+      <div class="sec__file"><code>about-s07-the-founder.html</code> <span class="tag tag--live">Portrait base64</span></div>
     </div>
   </header>
   <div class="frame frame--desk" data-w="1440">
@@ -432,16 +401,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Layout 2 colonnes : texte gauche, portrait droit. Colonne unique sur mobile.</li>
-        <li>Portrait 220×274 px, noir et blanc (<code>grayscale(100%)</code>).</li>
-        <li>Photo intégrée en base64 dans le code — ne pas remplacer par un lien image Divi.</li>
-      </ul>
+      <ul class="side__list"><li>Layout 2 colonnes en desktop : texte gauche, portrait droit. Colonne unique sur mobile.</li><li>Portrait 220×274 px, noir et blanc (<code>grayscale(100%)</code>).</li><li>Photo intégrée en base64 dans le fichier — ne pas remplacer par un lien image Divi.</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="preview/s07.html">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s07.html" download="about-s07-the-founder.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s07-the-founder.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s07-the-founder.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier est volumineux (~130 Ko) à cause de la photo encodée. C'est normal — colle-le tel quel.</p>
+      <p class="side__hint">Le fichier est volumineux (~130 Ko) à cause de la photo encodée. C'est normal — colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -465,15 +430,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Citation éditoriale forte, centrée. Lato 300 italic.</li>
-        <li>Couleur <code>#B8B8B8</code> — volontairement plus discrète que le texte courant.</li>
-      </ul>
+      <ul class="side__list"><li>Citation éditoriale forte, centrée. Lato 300 italic.</li><li>Couleur <code>#B8B8B8</code> — volontairement plus discrète que le texte courant.</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="preview/s08.html">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s08.html" download="about-s08-the-manifesto.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s08-the-manifesto.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s08-the-manifesto.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier téléchargé contient le HTML/CSS complet de la section. Colle-le tel quel dans un module Code Divi.</p>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -497,15 +459,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Rubriques de la plateforme avec descriptif court.</li>
-        <li>Marqueurs ou tirets en gold <code>#C8B568</code>.</li>
-      </ul>
+      <ul class="side__list"><li>Rubriques de la plateforme avec descriptif court. Liste structurée, sobrement présentée.</li><li>Marqueurs ou tirets en gold <code>#C8B568</code>.</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="preview/s09.html">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s09.html" download="about-s09-what-you-find-here.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s09-what-you-find-here.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s09-what-you-find-here.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier téléchargé contient le HTML/CSS complet de la section. Colle-le tel quel dans un module Code Divi.</p>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -529,15 +488,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Invitation à rejoindre la newsletter.</li>
-        <li>CTA en gold <code>#C8B568</code>, hover <code>#EDEDED</code>.</li>
-      </ul>
+      <ul class="side__list"><li>Invitation à rejoindre la newsletter. CTA en gold <code>#C8B568</code>, hover <code>#EDEDED</code>.</li><li>Section fixe — le formulaire d'inscription sera branché séparément.</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="preview/s10.html">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s10.html" download="about-s10-the-alta-circle.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s10-the-alta-circle.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s10-the-alta-circle.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier téléchargé contient le HTML/CSS complet de la section. Colle-le tel quel dans un module Code Divi.</p>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -561,15 +517,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Pont éditorial vers la marque Academy.</li>
-        <li>Lien vers le site ABMA — URL à remplacer par la vraie URL quand elle sera disponible.</li>
-      </ul>
+      <ul class="side__list"><li>Pont éditorial vers la marque Alta Body &amp; Mind Academy.</li><li>Lien vers le site ABMA — URL à remplacer par la vraie adresse lors de l'intégration.</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="preview/s11.html">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s11.html" download="about-s11-abma.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s11-abma.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s11-abma.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier téléchargé contient le HTML/CSS complet de la section. Colle-le tel quel dans un module Code Divi.</p>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -579,7 +532,7 @@ strong{color:var(--fg-1);font-weight:700}
     <div class="sec__num">S12</div>
     <div>
       <h3 class="sec__title">Closing — The Long Game</h3>
-      <div class="sec__file"><code>about-s12-closing.html</code> <span class="tag tag--note">Clôture éditoriale</span></div>
+      <div class="sec__file"><code>about-s12-closing.html</code> <span class="tag">Section fixe</span></div>
     </div>
   </header>
   <div class="frame frame--desk" data-w="1440">
@@ -593,16 +546,12 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list">
-        <li>Clôture éditoriale sobre. Texte centré, Lato 300, couleur <code>#8A8A8A</code>.</li>
-        <li>Aucun footer WordPress après cette section — désactiver le footer global sur la page About.</li>
-        <li>Dernière section — aucune section après.</li>
-      </ul>
+      <ul class="side__list"><li>Clôture éditoriale sobre. Texte centré, Lato 300, couleur <code>#8A8A8A</code>.</li><li>Aucun footer WordPress standard après cette section — désactiver le footer global sur la page About (Page Settings → Divi → Footer → None).</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="preview/s12.html">Copier le code</button>
-        <a class="btn btn--quiet" href="preview/s12.html" download="about-s12-closing.html">Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/about-s12-closing.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/about-s12-closing.html" download>Télécharger le fichier</a>
       </div>
-      <p class="side__hint">Le fichier téléchargé contient le HTML/CSS complet de la section. Colle-le tel quel dans un module Code Divi.</p>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
   </div>
 </article>
@@ -623,11 +572,7 @@ strong{color:var(--fg-1);font-weight:700}
 </section>
 
 <footer class="footer">
-  <div class="wrap">
-    ALTA MALE LAB · Référence d'intégration page About · document de travail, non public.
-    &nbsp;·&nbsp; <a href="https://altamalelab.github.io/hp-reference/" style="color:var(--fg-3)">← Homepage référence</a>
-    &nbsp;·&nbsp; <a href="apercu/" style="color:var(--fg-3)">Aperçu immersif →</a>
-  </div>
+  <div class="wrap">ALTA MALE LAB · Référence d'intégration page About · document de travail, non public.</div>
 </footer>
 
 <script>
